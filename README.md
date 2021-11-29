@@ -1,37 +1,7 @@
 # M226B_SpaceShip
 
-M226B Projekt Dokumentation
-
-
-
- 
-Inhalt
-Informieren	3
-Planen	3
-Entscheiden	3
-Realisieren	3
-Kontrollieren	3
-Auswerten	3
-
- 
-Informieren
-    Analysieren der Anforderungen
-        Mein Projekt ist ein Spiel wo ein SpaceShip wo durch ein Labyrinth fliegen muss und Gegner abschiessen muss. Und zum Ausgang finden muss. Dann gibt es Wände und verschiedene Gänge und ein Paar verschiedenen Level. Und verschiedene Gegner mit verschiedenen Fähigkeiten.
-        Vielleicht wird es auch nicht so kompliziert wen es mich überfordert.
-
-Planen
-
-
-Entscheiden
-
-
-Realisieren
-
-
-Kontrollieren
-
-
-Auswerten
-
-
-
+<div id="page-container">
+    <div id="pf1" class="pf w0 h0" data-page-no="1"><div class="pc pc1 w0 h0"><div class="t m0 x0 h1 y0 ff1 fs0 fc0 sc0 ls0 ws0">M<span class="_ _0"></span>2<span class="_ _0"></span>2<span class="_ _0"></span>6<span class="_ _0"></span>B<span class="_ _0"></span> <span class="_ _0"></span>P<span class="_ _0"></span>r<span class="_ _0"></span>o<span class="_ _0"></span>j<span class="_ _0"></span>e<span class="_ _0"></span>k<span class="_ _0"></span>t<span class="_ _0"></span> <span class="_ _0"></span>D<span class="_ _0"></span>o<span class="_ _0"></span>k<span class="_ _0"></span>u<span class="_ _0"></span>m<span class="_ _0"></span>e<span class="_ _0"></span>n<span class="_ _0"></span>t<span class="_ _0"></span>a<span class="_ _0"></span>t<span class="_ _0"></span>i<span class="_ _0"></span>o<span class="_ _0"></span>n</div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+    <div id="pf2" class="pf w0 h0" data-page-no="2"><div class="pc pc2 w0 h0"><div class="t m0 x0 h2 y1 ff1 fs1 fc1 sc0 ls0 ws0">Inhalt</div><div class="t m0 x0 h3 y2 ff2 fs2 fc0 sc0 ls0 ws0">Informieren ......................................<span class="_ _1"></span>....................................................<span class="_ _1"></span>...................................................<span class="_ _1"></span>3</div><div class="t m0 x0 h3 y3 ff2 fs2 fc0 sc0 ls0 ws0">Planen<span class="_ _1"></span>......<span class="_ _1"></span>.....................................................<span class="_ _1"></span>....................................................<span class="_ _1"></span>.......................................3</div><div class="t m0 x0 h3 y4 ff2 fs2 fc0 sc0 ls0 ws0">Entscheiden<span class="_ _2"> </span>....................................................<span class="_ _1"></span>....................................................<span class="_ _1"></span>.....................................3</div><div class="t m0 x0 h3 y5 ff2 fs2 fc0 sc0 ls0 ws0">Realisieren<span class="_ _2"> </span>............................................................................<span class="_ _1"></span>....................................................<span class="_ _1"></span>...............3</div><div class="t m0 x0 h3 y6 ff2 fs2 fc0 sc0 ls0 ws0">Kontrollieren<span class="_ _3"> </span>....................................................<span class="_ _1"></span>....................................................<span class="_ _1"></span>...................................3</div><div class="t m0 x0 h3 y7 ff2 fs2 fc0 sc0 ls0 ws0">Auswerten<span class="_ _4"> </span>...................................................<span class="_ _1"></span>....................................................<span class="_ _1"></span>........................................3</div><a class="l" href="#pf3" data-dest-detail='[3,"XYZ",70,771,null]'><div class="d m1" style="border-style:none;position:absolute;left:70.849998px;bottom:736.545044px;width:453.100014px;height:13.427979px;background-color:rgba(255,255,255,0.000001);"></div></a><a class="l" href="#pf3" data-dest-detail='[3,"XYZ",70,634,null]'><div class="d m1" style="border-style:none;position:absolute;left:70.849998px;bottom:717.054077px;width:453.100014px;height:13.427979px;background-color:rgba(255,255,255,0.000001);"></div></a><a class="l" href="#pf3" data-dest-detail='[3,"XYZ",70,564,null]'><div class="d m1" style="border-style:none;position:absolute;left:70.849998px;bottom:697.563049px;width:453.100014px;height:13.427979px;background-color:rgba(255,255,255,0.000001);"></div></a><a class="l" href="#pf3" data-dest-detail='[3,"XYZ",70,494,null]'><div class="d m1" style="border-style:none;position:absolute;left:70.849998px;bottom:678.072083px;width:453.100014px;height:13.427979px;background-color:rgba(255,255,255,0.000001);"></div></a><a class="l" href="#pf3" data-dest-detail='[3,"XYZ",70,424,null]'><div class="d m1" style="border-style:none;position:absolute;left:70.849998px;bottom:658.581055px;width:453.100014px;height:13.427979px;background-color:rgba(255,255,255,0.000001);"></div></a><a class="l" href="#pf3" data-dest-detail='[3,"XYZ",70,354,null]'><div class="d m1" style="border-style:none;position:absolute;left:70.849998px;bottom:639.090088px;width:453.100014px;height:13.427979px;background-color:rgba(255,255,255,0.000001);"></div></a></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+    <div id="pf3" class="pf w0 h0" data-page-no="3"><div class="pc pc3 w0 h0"><div class="t m0 x0 h2 y1 ff1 fs1 fc1 sc0 ls0 ws0">Informieren</div><div class="t m0 x0 h4 y8 ff1 fs3 fc1 sc0 ls0 ws0">Analysieren der Anforderungen</div><div class="t m0 x0 h3 y9 ff2 fs2 fc0 sc0 ls0 ws0">Mein Projekt ist ein Spiel wo ein SpaceShip wo durch ein Labyrinth fliegen muss und Gegner </div><div class="t m0 x0 h3 ya ff2 fs2 fc0 sc0 ls0 ws0">abschiessen muss. Und zum Ausgang finden muss. Dann gibt es Wände und verschiedene Gänge und </div><div class="t m0 x0 h3 yb ff2 fs2 fc0 sc0 ls0 ws0">ein Paar verschiedenen Level. Und verschiedene Gegner mit verschiedenen Fähigkeiten.</div><div class="t m0 x0 h3 yc ff2 fs2 fc0 sc0 ls0 ws0">Vielleicht wird es auch nicht so kompliziert wen es mich überfordert.</div><div class="t m0 x0 h2 yd ff1 fs1 fc1 sc0 ls0 ws0">Planen</div><div class="t m0 x0 h2 ye ff1 fs1 fc1 sc0 ls0 ws0">Entscheiden</div><div class="t m0 x0 h2 yf ff1 fs1 fc1 sc0 ls0 ws0">Realisieren</div><div class="t m0 x0 h2 y10 ff1 fs1 fc1 sc0 ls0 ws0">Kontrollieren</div><div class="t m0 x0 h2 y11 ff1 fs1 fc1 sc0 ls0 ws0">Auswerten</div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+  </div>
