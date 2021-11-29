@@ -1,0 +1,6 @@
+# Ignorieren von daten.
+
+bin/
+.settings/
+.classpath
+.project
