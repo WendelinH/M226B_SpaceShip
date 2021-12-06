@@ -12,7 +12,7 @@ public abstract class LevelViewController implements ViewInterface{
 	private boolean levelCompleat = false; 
 
 	@Override
-	public abstract void setup();
+	public abstract void setup(PApplet window);
 
 	@Override
 	public abstract void draw(PApplet window);

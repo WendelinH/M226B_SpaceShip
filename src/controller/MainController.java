@@ -27,16 +27,16 @@ public class MainController  extends PApplet{
 	}
 
 	public void settings() {
-		size(800,700);
+		size(750,750);
 	}
 
 	@Override
 	public void setup() {
 		switch (state) {
-		case Start: startView.setup(); break;
-		case Level1: level1View.setup(); break;
-		case Level2: level2View.setup(); break;
-		case SpielEnde: endView.setup(); break;
+		case Start: startView.setup(this); break;
+		case Level1: level1View.setup(this); break;
+		case Level2: level2View.setup(this); break;
+		case SpielEnde: endView.setup(this); break;
 		}
 	}
 

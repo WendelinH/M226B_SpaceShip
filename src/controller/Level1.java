@@ -5,7 +5,7 @@ import processing.core.PApplet;
 public class Level1 extends LevelViewController{
 
 	@Override
-	public void setup() {
+	public void setup(PApplet window) {
 		// TODO Auto-generated method stub
 		
 	}

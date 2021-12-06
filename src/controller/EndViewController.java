@@ -10,7 +10,7 @@ import processing.core.PApplet;
 public class EndViewController implements ViewInterface {
 
 	@Override
-	public void setup() {
+	public void setup(PApplet window) {
 		// TODO Auto-generated method stub
 		
 	}

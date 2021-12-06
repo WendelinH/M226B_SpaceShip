@@ -9,7 +9,7 @@ import processing.core.PApplet;
  */
 public interface ViewInterface {
 	
-	abstract void setup();
+	abstract void setup(PApplet window);
 	
 	abstract void draw(PApplet window);
 	
