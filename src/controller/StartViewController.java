@@ -13,14 +13,10 @@ public class StartViewController implements ViewInterface{
 	
 	boolean lol = true;
 	PImage bg;
-	
-	@Override
-	public void setup(PApplet window) {
-		bg = window.loadImage("/img/bg_start.jpg");
-	}
 
 	@Override
 	public void draw(PApplet window) {
+		bg = window.loadImage("/img/bg_start.jpg");
 		window.background(bg);
 		window.fill(255);
 		PFont f = window.createFont("Consolas",16,true);

@@ -1,5 +1,6 @@
 package controller;
 
+import model.Raumschiff;
 import processing.core.PApplet;
 
 /**
@@ -9,10 +10,8 @@ import processing.core.PApplet;
  */
 public abstract class LevelViewController implements ViewInterface{
 	
-	private boolean levelCompleat = false; 
-
-	@Override
-	public abstract void setup(PApplet window);
+	public Raumschiff r;
+	private boolean levelCompleat = false;
 
 	@Override
 	public abstract void draw(PApplet window);

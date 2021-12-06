@@ -1,5 +1,6 @@
 package controller;
 
+import model.Figur;
 import processing.core.PApplet;
 
 /**
@@ -32,12 +33,7 @@ public class MainController  extends PApplet{
 
 	@Override
 	public void setup() {
-		switch (state) {
-		case Start: startView.setup(this); break;
-		case Level1: level1View.setup(this); break;
-		case Level2: level2View.setup(this); break;
-		case SpielEnde: endView.setup(this); break;
-		}
+		
 	}
 
 	@Override
@@ -85,6 +81,13 @@ public class MainController  extends PApplet{
 		switch (state) {
 		case Level1: level = level1View; break;
 		case Level2: level = level2View; break;
+		}
+		
+		switch (key) {
+		case 'w': level.r.setDirection(Figur.Direction.N); level.r.move(this); break; 
+		case 's': level.r.setDirection(Figur.Direction.S); level.r.move(this); break; 
+		case 'a': level.r.setDirection(Figur.Direction.W); level.r.move(this); break; 
+		case 'd': level.r.setDirection(Figur.Direction.E); level.r.move(this); break; 			
 		}
 		
 		if (level.isLevelCompleat()) {
