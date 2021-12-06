@@ -15,7 +15,7 @@ Mein Projekt ist ein Spiel wo ein SpaceShip wo durch ein Labyrinth fliegen muss 
 
 ### Planen
 
-![Erstes Classen-Diagramm]("Classen-Diagramme/Screenshot_2021-12-06_102343.png")
+![Erstes Classen-Diagramm](Classen-Diagramme/Screenshot_2021-12-06_102343.png)
 
 ### Entscheiden
 
