@@ -1,9 +1,9 @@
 # Arbeitsjournal vom 29.11.2021
 
-|Header1 |Header2  |
+|Titel |Angaben  |
 --- | --- |
 |Zeit (geplant)|1.5h|
-|Zeit (tatsächlich)|1.5h|
+|Zeit (tats�chlich)|1.5h|
 |Geplante Ziele|Aufbau des Projekts erstellen|
 |Erreichte Ziele|Ich habe die Dokumentation angefangen.|
 |ausgeführte Arbeiten| - Grundstruktur auf GitHub erstelt|
