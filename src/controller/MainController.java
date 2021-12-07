@@ -65,10 +65,12 @@ public class MainController  extends PApplet{
 		if (keyCode == 49) {// KeyCode 49 ist '1'
 			state = SpielZustand.Level1;
 			level1View.setLevelCompleat(false);
+			level1View.restart(this);
 		}
 		if (keyCode == 50) {// KeyCode 50 ist '2'
 			state = SpielZustand.Level2;
 			level2View.setLevelCompleat(false);
+			level2View.restart(this);
 		}
 	}
 	
@@ -97,6 +99,8 @@ public class MainController  extends PApplet{
 		}else if (keyCode == 32) {// KeyCode 32 ist Lertaste
 			level.setLevelCompleat(true);
 		}
+		
+		System.out.println("Kordinaten (" + level.r.getX() + "/" + level.r.getY() + ")");
 		
 	}
 	

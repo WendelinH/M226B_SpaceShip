@@ -21,4 +21,14 @@ public class Raumschiff extends Figur{
 		window.image(img, getX(), getY());
 	}
 
+	@Override
+	public void move(PApplet window) {
+		switch(direction) {
+		case N: setY(Math.max(0, getY() - getSpeed())); break;
+		case E: setX(Math.min(window.width - getSize(), getX() + getSpeed())); break;
+		case S: setY(Math.min(window.height - getSize(), getY() + getSpeed())); break;
+		case W: setX(Math.max(0, getX() - getSpeed())); break;
+		}
+	}
+
 }

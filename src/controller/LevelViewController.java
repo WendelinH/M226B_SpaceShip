@@ -13,6 +13,8 @@ public abstract class LevelViewController implements ViewInterface{
 	public Raumschiff r;
 	private boolean levelCompleat = false;
 
+	
+	public abstract void restart(PApplet window);
 	@Override
 	public abstract void draw(PApplet window);
 

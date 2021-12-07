@@ -40,14 +40,7 @@ public abstract class Figur {
 
 	public abstract void draw(PApplet window);
 
-	public void move(PApplet window) {
-		switch(direction) {
-		case N: y = Math.max(0, y - speed); break;
-		case E: x = Math.min(window.width, x + speed); break;
-		case S: y = Math.min(window.height, y + speed); break;
-		case W: x = Math.max(0, x - speed);
-		}
-	}
+	public abstract void move(PApplet window);
 
 	/**
 	 * @return the hp

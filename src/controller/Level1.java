@@ -11,13 +11,17 @@ public class Level1 extends LevelViewController{
 	 */
 	public Level1() {
 		super();
+	}
+
+	@Override
+	public void restart(PApplet window) {
 		r = new Raumschiff(10, 3, 100, 650, Direction.N);
 	}
 
 	@Override
 	public void draw(PApplet window) {
 		// TODO Auto-generated method stub
-		window.background(100);
+		window.background(0);
 		window.fill(255);
 		window.textSize(30);
 		window.text("Level 1", 20,30);
