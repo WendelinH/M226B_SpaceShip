@@ -9,15 +9,16 @@ import processing.core.PImage;
  * @author Wendelin
  *
  */
-public class StartViewController implements ViewInterface{
-	
-	boolean lol = true;
-	PImage bg;
+public class StartViewController extends View{
+
+	@Override
+	public void restart(PApplet window) {
+		setBg(window.loadImage("/img/bg_start.jpg"));
+	}
 
 	@Override
 	public void draw(PApplet window) {
-		bg = window.loadImage("/img/bg_start.jpg");
-		window.background(bg);
+		window.background(getBg());
 		window.fill(255);
 		PFont f = window.createFont("Consolas",16,true);
 		window.textFont(f,36);

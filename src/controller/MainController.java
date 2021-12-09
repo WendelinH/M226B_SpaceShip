@@ -8,12 +8,12 @@ import processing.core.PApplet;
  * @author Wendelin
  *
  */
-public class MainController  extends PApplet{
+public class MainController extends PApplet{
 
-	StartViewController startView = new StartViewController();
-	Level1 level1View = new Level1();
-	Level2 level2View = new Level2();
-	EndViewController endView = new EndViewController();
+	private StartViewController startView = new StartViewController();
+	private Level1 level1View = new Level1();
+	private Level2 level2View = new Level2();
+	private EndViewController endView = new EndViewController();
 
 	enum SpielZustand{
 		Start, Level1, Level2, SpielEnde;
@@ -61,7 +61,7 @@ public class MainController  extends PApplet{
 	/**
 	 * Das ist die keyPressed am Anfang des Spieles.
 	 */
-	private void keyPressedStart() {
+	public void keyPressedStart() {
 		if (keyCode == 49) {// KeyCode 49 ist '1'
 			state = SpielZustand.Level1;
 			level1View.setLevelCompleat(false);
@@ -77,7 +77,7 @@ public class MainController  extends PApplet{
 	/**
 	 * Das ist die keyPressed wärent dem Spielen.
 	 */
-	private void keyPressedInGame() {
+	public void keyPressedInGame() {
 		LevelViewController level = null;
 		
 		switch (state) {
@@ -86,10 +86,10 @@ public class MainController  extends PApplet{
 		}
 		
 		switch (key) {
-		case 'w': level.r.setDirection(Figur.Direction.N); level.r.move(this); break; 
-		case 's': level.r.setDirection(Figur.Direction.S); level.r.move(this); break; 
-		case 'a': level.r.setDirection(Figur.Direction.W); level.r.move(this); break; 
-		case 'd': level.r.setDirection(Figur.Direction.E); level.r.move(this); break; 			
+		case 'w': level.getR().setDirection(Figur.Direction.N); level.getR().move(this); break; 
+		case 's': level.getR().setDirection(Figur.Direction.S); level.getR().move(this); break; 
+		case 'a': level.getR().setDirection(Figur.Direction.W); level.getR().move(this); break; 
+		case 'd': level.getR().setDirection(Figur.Direction.E); level.getR().move(this); break; 			
 		}
 		
 		if (level.isLevelCompleat()) {
@@ -100,14 +100,14 @@ public class MainController  extends PApplet{
 			level.setLevelCompleat(true);
 		}
 		
-		System.out.println("Kordinaten (" + level.r.getX() + "/" + level.r.getY() + ")");
+		System.out.println("Kordinaten (" + level.getR().getX() + "/" + level.getR().getY() + ")");
 		
 	}
 	
 	/**
 	 * Das ist die keyPressed am Ende des Spieles. 
 	 */
-	private void keyPressedEnde() {
+	public void keyPressedEnde() {
 		if (keyCode == 10) {// KeyCode 10 ist "Enter"
 			state = SpielZustand.Start;
 		}

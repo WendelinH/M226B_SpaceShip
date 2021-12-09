@@ -8,16 +8,30 @@ import processing.core.PApplet;
  * @author Wendelin
  *
  */
-public abstract class LevelViewController implements ViewInterface{
+public abstract class LevelViewController extends View{
 	
-	public Raumschiff r;
+	private Raumschiff r;
 	private boolean levelCompleat = false;
 
-	
+	@Override
 	public abstract void restart(PApplet window);
 	@Override
 	public abstract void draw(PApplet window);
 
+	/**
+	 * @param r the r to set
+	 */
+	public void setR(Raumschiff r) {
+		this.r = r;
+	}
+
+	/**
+	 * @return the r
+	 */
+	public Raumschiff getR() {
+		return r;
+	}
+	
 	/**
 	 * @param levelCompleat the levelCompleat to set
 	 */
