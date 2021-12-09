@@ -33,7 +33,7 @@ public class MainController extends PApplet{
 
 	@Override
 	public void setup() {
-		
+		startView.restart(this);
 	}
 
 	@Override
@@ -63,14 +63,12 @@ public class MainController extends PApplet{
 	 */
 	public void keyPressedStart() {
 		if (keyCode == 49) {// KeyCode 49 ist '1'
-			state = SpielZustand.Level1;
-			level1View.setLevelCompleat(false);
 			level1View.restart(this);
+			state = SpielZustand.Level1;
 		}
 		if (keyCode == 50) {// KeyCode 50 ist '2'
-			state = SpielZustand.Level2;
-			level2View.setLevelCompleat(false);
 			level2View.restart(this);
+			state = SpielZustand.Level2;
 		}
 	}
 	
@@ -94,6 +92,7 @@ public class MainController extends PApplet{
 		
 		if (level.isLevelCompleat()) {
 			if (keyCode == 10) {// KeyCode 10 ist "Enter"
+				endView.restart(this);
 				state = SpielZustand.SpielEnde;
 			}
 		}else if (keyCode == 32) {// KeyCode 32 ist Lertaste
@@ -109,6 +108,7 @@ public class MainController extends PApplet{
 	 */
 	public void keyPressedEnde() {
 		if (keyCode == 10) {// KeyCode 10 ist "Enter"
+			startView.restart(this);
 			state = SpielZustand.Start;
 		}
 	}

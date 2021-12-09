@@ -16,6 +16,7 @@ public class Level2 extends LevelViewController{
 	@Override
 	public void restart(PApplet window) {
 		setR(new Raumschiff(10, 3, 100, 100, Direction.N));
+		setLevelCompleat(false);
 	}
 
 	@Override
