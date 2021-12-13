@@ -17,14 +17,14 @@ Mein Projekt ist ein Spiel wo ein SpaceShip wo durch ein Labyrinth fliegen muss 
 
 #### Zeitplan
 Stand 13-12-2021
-[Erstes Classen-Diagramm](Zeitplan/Zeitplan_2021-12-13.pdf)
+[Zeitplan 13-12-2021](Zeitplan/Zeitplan_2021-12-13.pdf)
 
 #### Klassen-Diagramm
 Stand 06-12-2021
 ![Erstes Classen-Diagramm](Classen-Diagramme/Screenshot_2021-12-06_102343.png)
 
 Stand 09-12-2021
-![Erstes Classen-Diagramm](Classen-Diagramme/Screenshot_2021-12-09_101626.png)
+![Zweites Classen-Diagramm](Classen-Diagramme/Screenshot_2021-12-09_101626.png)
 
 ### Entscheiden
 

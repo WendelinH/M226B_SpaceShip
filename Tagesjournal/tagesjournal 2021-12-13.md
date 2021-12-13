@@ -3,7 +3,7 @@
 |Titel |Angaben  |
 --- | --- |
 |Zeit (geplant)|2h|
-|Zeit (tatsÃ¤chlich)| 1.5h |
+|Zeit (tatsÃ¤chlich)| 2h |
 |Geplante Ziele| Zeitplan erstellen |
 |Erreichte Ziele| Zeitplan erstellt |
 |ausgefÃ¼hrte Arbeiten| Zeitplan erstellt aber nicht ganz fertig. |
