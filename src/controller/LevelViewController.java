@@ -1,5 +1,8 @@
 package controller;
 
+import java.util.ArrayList;
+
+import model.AsteroidenWand;
 import model.Raumschiff;
 import processing.core.PApplet;
 
@@ -11,6 +14,7 @@ import processing.core.PApplet;
 public abstract class LevelViewController extends View{
 	
 	private Raumschiff r;
+	private ArrayList<AsteroidenWand> asteroidenListe = new ArrayList<>();
 	private boolean levelCompleat = false;
 
 	@Override
@@ -30,6 +34,20 @@ public abstract class LevelViewController extends View{
 	 */
 	public Raumschiff getR() {
 		return r;
+	}
+	
+	/**
+	 * @return the asteroidenListe
+	 */
+	public ArrayList<AsteroidenWand> getAsteroidenListe() {
+		return asteroidenListe;
+	}
+	
+	/**
+	 * @param asteroidenListe the asteroidenListe to set
+	 */
+	public void setAsteroidenListe(ArrayList<AsteroidenWand> asteroidenListe) {
+		this.asteroidenListe = asteroidenListe;
 	}
 	
 	/**

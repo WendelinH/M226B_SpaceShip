@@ -11,6 +11,10 @@ public class Raumschiff extends Figur{
 
 	@Override
 	public void draw(PApplet window) {
+		window.stroke(0, 100, 200);
+		window.strokeWeight(1);
+		window.noFill();
+		window.rect(getX(), getY(), getSize(), getSize());
 		PImage img = null;
 		switch (getDirection()) {
 		case N: img = window.loadImage("/img/spaceship_N.png"); break; 
