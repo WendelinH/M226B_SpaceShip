@@ -16,8 +16,9 @@ public class Level1 extends LevelViewController{
 
 	@Override
 	public void restart(PApplet window) {
-		setR(new Raumschiff(10, 3, 100, 650, Direction.N));
+		setRaumschiff(new Raumschiff(10, 3, 100, 650, Direction.N));
 		setLevelCompleat(false);
+		setGameOver(false);
 		
 		AsteroidenWand a1 = new AsteroidenWand(50, 50, 300, 20);
 		AsteroidenWand a2 = new AsteroidenWand(50, 100, 60, 60);
@@ -42,7 +43,11 @@ public class Level1 extends LevelViewController{
 			a.draw(window);
 		}
 
-		getR().draw(window);
+		getRaumschiff().draw(window);
+		
+		if (isGameOver()) {
+			gameOver(window);
+		}
 	}
 
 }

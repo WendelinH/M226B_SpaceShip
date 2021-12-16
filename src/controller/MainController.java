@@ -57,7 +57,7 @@ public class MainController extends PApplet{
 
 		System.out.println(state +" "+ key +" "+ str(keyCode));
 	}
-	
+
 	/**
 	 * Das ist die keyPressed am Anfang des Spieles.
 	 */
@@ -71,26 +71,31 @@ public class MainController extends PApplet{
 			state = SpielZustand.Level2;
 		}
 	}
-	
+
 	/**
 	 * Das ist die keyPressed wärent dem Spielen.
 	 */
 	public void keyPressedInGame() {
 		LevelViewController level = null;
-		
+
 		switch (state) {
 		case Level1: level = level1View; break;
 		case Level2: level = level2View; break;
+		default:
+			level = null;
+			break;
 		}
-		
-		switch (key) {
-		case 'w': level.getR().setDirection(Figur.Direction.N); level.getR().move(this); break; 
-		case 's': level.getR().setDirection(Figur.Direction.S); level.getR().move(this); break; 
-		case 'a': level.getR().setDirection(Figur.Direction.W); level.getR().move(this); break; 
-		case 'd': level.getR().setDirection(Figur.Direction.E); level.getR().move(this); break; 			
+		if (!level.isGameOver()) {
+			switch (key) {
+			case 'w': level.getRaumschiff().setDirection(Figur.Direction.N); level.getRaumschiff().move(this); break; 
+			case 's': level.getRaumschiff().setDirection(Figur.Direction.S); level.getRaumschiff().move(this); break; 
+			case 'a': level.getRaumschiff().setDirection(Figur.Direction.W); level.getRaumschiff().move(this); break; 
+			case 'd': level.getRaumschiff().setDirection(Figur.Direction.E); level.getRaumschiff().move(this); break; 			
+			}
 		}
-		
-		if (level.isLevelCompleat()) {
+		level.checkCollisions();
+
+		if (level.isLevelCompleat() || level.isGameOver()) {
 			if (keyCode == 10) {// KeyCode 10 ist "Enter"
 				endView.restart(this);
 				state = SpielZustand.SpielEnde;
@@ -98,11 +103,11 @@ public class MainController extends PApplet{
 		}else if (keyCode == 32) {// KeyCode 32 ist Lertaste
 			level.setLevelCompleat(true);
 		}
-		
-		System.out.println("Kordinaten (" + level.getR().getX() + "/" + level.getR().getY() + ")");
-		
+
+		System.out.println("Kordinaten (" + level.getRaumschiff().getX() + "/" + level.getRaumschiff().getY() + ")");
+
 	}
-	
+
 	/**
 	 * Das ist die keyPressed am Ende des Spieles. 
 	 */

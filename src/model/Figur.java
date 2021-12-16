@@ -1,14 +1,15 @@
 package model;
 
 import processing.core.PApplet;
+import java.awt.Rectangle;
 
 public abstract class Figur {
 
 	private int hp;
-	private float speed;
+	private int speed;
 	private int size;
-	private float x;
-	private float y;
+	private int x;
+	private int y;
 
 	Direction direction = Direction.N;
 
@@ -29,7 +30,7 @@ public abstract class Figur {
 	 * @param y
 	 * @param direction
 	 */
-	public Figur(int hp, float speed, int size, float x, float y, Direction direction) {
+	public Figur(int hp, int speed, int size, int x, int y, Direction direction) {
 		this.hp = hp;
 		this.speed = speed;
 		this.size = size;
@@ -41,6 +42,10 @@ public abstract class Figur {
 	public abstract void draw(PApplet window);
 
 	public abstract void move(PApplet window);
+	
+	public Rectangle getBounds() {
+	    return new Rectangle(x, y, size, size);
+	}
 
 	/**
 	 * @return the hp
@@ -59,14 +64,14 @@ public abstract class Figur {
 	/**
 	 * @return the speed
 	 */
-	public float getSpeed() {
+	public int getSpeed() {
 		return speed;
 	}
 
 	/**
 	 * @param speed the speed to set
 	 */
-	public void setSpeed(float speed) {
+	public void setSpeed(int speed) {
 		this.speed = speed;
 	}
 
@@ -87,28 +92,28 @@ public abstract class Figur {
 	/**
 	 * @return the x
 	 */
-	public float getX() {
+	public int getX() {
 		return x;
 	}
 
 	/**
 	 * @param x the x to set
 	 */
-	public void setX(float x) {
+	public void setX(int x) {
 		this.x = x;
 	}
 
 	/**
 	 * @return the y
 	 */
-	public float getY() {
+	public int getY() {
 		return y;
 	}
 
 	/**
 	 * @param y the y to set
 	 */
-	public void setY(float y) {
+	public void setY(int y) {
 		this.y = y;
 	}
 

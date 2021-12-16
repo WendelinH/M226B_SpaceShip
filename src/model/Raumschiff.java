@@ -5,7 +5,7 @@ import processing.core.PImage;
 
 public class Raumschiff extends Figur{
 
-	public Raumschiff(int hp, float speed, float x, float y, Direction direction) {
+	public Raumschiff(int hp, int speed, int x, int y, Direction direction) {
 		super(hp, speed, 50, x, y, direction);
 	}
 

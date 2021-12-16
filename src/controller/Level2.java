@@ -15,8 +15,9 @@ public class Level2 extends LevelViewController{
 	
 	@Override
 	public void restart(PApplet window) {
-		setR(new Raumschiff(10, 3, 100, 100, Direction.N));
+		setRaumschiff(new Raumschiff(10, 3, 100, 100, Direction.N));
 		setLevelCompleat(false);
+		setGameOver(false);
 	}
 
 	@Override
@@ -26,7 +27,11 @@ public class Level2 extends LevelViewController{
 		window.textSize(30);
 		window.text("Level 2", 20,30);
 		
-		getR().draw(window);
+		getRaumschiff().draw(window);
+		
+		if (isGameOver()) {
+			gameOver(window);
+		}
 	}
 
 	

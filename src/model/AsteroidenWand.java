@@ -1,5 +1,7 @@
 package model;
 
+import java.awt.Rectangle;
+
 import processing.core.PApplet;
 import processing.core.PImage;
 
@@ -7,8 +9,8 @@ public class AsteroidenWand {
 	
 	private int width;
 	private int height;
-	private float x;
-	private float y;
+	private int x;
+	private int y;
 	
 	PImage img = null;
 	
@@ -19,7 +21,7 @@ public class AsteroidenWand {
 	 * @param x
 	 * @param y
 	 */
-	public AsteroidenWand(float x, float y, int width, int height) {
+	public AsteroidenWand(int x, int y, int width, int height) {
 		this.x = x;
 		this.y = y;
 		this.width = width;
@@ -33,6 +35,10 @@ public class AsteroidenWand {
 		window.noFill();
 		window.rect(x, y, width, height);
 		window.image(img,x,y,width,height);
+	}
+	
+	public Rectangle getBounds() {
+	    return new Rectangle(x, y, width, height);
 	}
 
 	/**
@@ -66,28 +72,28 @@ public class AsteroidenWand {
 	/**
 	 * @return the x
 	 */
-	public float getX() {
+	public int getX() {
 		return x;
 	}
 
 	/**
 	 * @param x the x to set
 	 */
-	public void setX(float x) {
+	public void setX(int x) {
 		this.x = x;
 	}
 
 	/**
 	 * @return the y
 	 */
-	public float getY() {
+	public int getY() {
 		return y;
 	}
 
 	/**
 	 * @param y the y to set
 	 */
-	public void setY(float y) {
+	public void setY(int y) {
 		this.y = y;
 	}
 	
