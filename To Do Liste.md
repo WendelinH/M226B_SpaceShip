@@ -29,10 +29,10 @@ Alles beschreiben (Klassen-Diagramm, Bilder, Code-Snipped, Geplant / doch anders
 8. JavaDoc erstellen
 9. Zeitplan Verfollständigen und
 10. Dokumentation des Projekts ungefähr 10 Seiten auch TagesJournal verwenden.
-10. - Klassendiagramm
-10. - Zeitplan
-10. - Bilder und Code-snipped
-10. - Text und beschreibungen
-10. - Tagesjournal verwenden um einen roten faden des Projektes erleutern zu können.
-11. Anforderungen an das Projekt und seine bewertung auf Teams anschauen und überprüfen ob alles erfült wirt?
-12. ...
+  * Klassendiagramm
+  * Zeitplan
+  * Bilder und Code-snippets
+  * Text und beschreibungen
+  * Tagesjournal verwenden um einen roten faden des Projektes erleutern zu können.
+15. Anforderungen an das Projekt und seine bewertung auf Teams anschauen und überprüfen ob alles erfült wirt?
+16. ...
