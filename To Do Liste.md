@@ -18,9 +18,18 @@ Projektiel klasse erbt von Figur Klasse
 Alles beschreiben (Klassen-Diagramm, Bilder, Code-Snipped, Geplant / doch anders gemacht, etc...)
 
 # To Do Liste
-- Levels desidnes
+- Interface einbauen
 - Gegner shoot
-- Tests auch Mockup
 - Level ende
-- Dokumentation
+- Classendiagram updaten
+- Level designes
+- Tests erstellen auch Mockup
+- JavaDoc erstellen
+- Zeitplan Verfollständigen und
+- Dokumentation des Projekts ungefähr 10 Seiten auch TagesJournal verwenden.
+- - Klassendiagramm
+- - Zeitplan
+- - Bilder und Code-snipped
+- - Text und beschreibungen
+- - Tagesjournal verwenden um einen roten faden des Projektes erleutern zu können.
 - ...
