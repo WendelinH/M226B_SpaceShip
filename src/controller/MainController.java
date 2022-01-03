@@ -119,7 +119,6 @@ public class MainController extends PApplet{
 			case 's': level.getRaumschiff().setDirection(Figur.Direction.S); level.getRaumschiff().move(this); break; 
 			case 'a': level.getRaumschiff().setDirection(Figur.Direction.W); level.getRaumschiff().move(this); break; 
 			case 'd': level.getRaumschiff().setDirection(Figur.Direction.E); level.getRaumschiff().move(this); break;
-			case ' ': level.getRaumschiff().shoot(); break; 
 			}
 		}
 		level.checkCollisions();
@@ -129,11 +128,10 @@ public class MainController extends PApplet{
 				endView.restart(this);
 				state = SpielZustand.SpielEnde;
 			}
-		}else if (keyCode == 10) {// KeyCode 10 ist "Enter"
-			level.setLevelCompleat(true);
 		}
 
 		System.out.println("Kordinaten (" + level.getRaumschiff().getX() + "/" + level.getRaumschiff().getY() + ")");
+		System.out.println("ProjektileAnzahl " + level.getRaumschiff().getProjektilListe().size());
 
 	}
 

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.awt.Rectangle;
 
 import model.AsteroidenWand;
+import model.EndPortal;
 import model.Gegner;
 import model.Projektil;
 import model.Raumschiff;
@@ -17,6 +18,7 @@ import processing.core.PApplet;
 public abstract class LevelViewController extends View{
 
 	private Raumschiff raumschiff;
+	private EndPortal endPortal;
 	private ArrayList<AsteroidenWand> asteroidenListe = new ArrayList<>();
 	private ArrayList<Gegner> gegnerListe = new ArrayList<>();
 	private boolean levelCompleat = false;
@@ -36,6 +38,12 @@ public abstract class LevelViewController extends View{
 	public void checkCollisions() {
 
 		Rectangle rBounds = raumschiff.getBounds();
+		Rectangle eBounds = endPortal.getBounds();
+		
+		if (rBounds.intersects(eBounds)) {
+			setLevelCompleat(true);
+			System.out.println("Level Compleat.!");
+		}
 
 		for (AsteroidenWand a : asteroidenListe) {
 
@@ -47,6 +55,7 @@ public abstract class LevelViewController extends View{
 		}
 
 		for (Gegner g : gegnerListe) {
+			
 			Rectangle gBounds = g.getBounds();
 
 			if(g.isBroken()) {
@@ -59,6 +68,15 @@ public abstract class LevelViewController extends View{
 
 				if (gBounds.intersects(pBounds)) {
 					g.setBroken(true);
+				}
+			}
+			
+			for (Projektil p : g.getProjektilListe()) {
+
+				Rectangle pBounds = p.getBounds();
+
+				if (pBounds.intersects(rBounds)) {
+					setGameOver(true);
 				}
 			}
 
@@ -84,6 +102,18 @@ public abstract class LevelViewController extends View{
 		return raumschiff;
 	}
 
+	/**
+	 * @return the endPortal
+	 */
+	public EndPortal getEndPortal() {
+		return endPortal;
+	}
+	/**
+	 * @param endPortal the endPortal to set
+	 */
+	public void setEndPortal(EndPortal endPortal) {
+		this.endPortal = endPortal;
+	}
 	/**
 	 * @return the asteroidenListe
 	 */
