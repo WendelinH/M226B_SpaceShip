@@ -2,14 +2,17 @@ package model;
 
 import processing.core.PApplet;
 import java.awt.Rectangle;
+import java.util.ArrayList;
 
 public abstract class Figur {
 
-	private int hp;
 	private int speed;
-	private int size;
+	private int width;
+	private int height;
 	private int x;
 	private int y;
+	
+	private ArrayList<Projektil> projektilListe = new ArrayList<>();
 
 	Direction direction = Direction.N;
 
@@ -30,13 +33,22 @@ public abstract class Figur {
 	 * @param y
 	 * @param direction
 	 */
-	public Figur(int hp, int speed, int size, int x, int y, Direction direction) {
-		this.hp = hp;
+	public Figur(int speed, int width, int height, int x, int y, Direction direction) {
 		this.speed = speed;
-		this.size = size;
+		this.width = width;
+		this.height = height;
 		this.x = x;
 		this.y = y;
 		this.direction = direction;
+	}
+	
+	public void shoot() {
+		switch(direction) {
+		case N: projektilListe.add(new Projektil(6, 5, 15, x + width/2, y + height/3, direction)); break;
+		case E: projektilListe.add(new Projektil(6, 15, 5, x + width/2, y + height/3, direction)); break;
+		case S: projektilListe.add(new Projektil(6, 5, 15, x + width/2, y + height/3, direction)); break;
+		case W: projektilListe.add(new Projektil(6, 15, 5, x + width/2, y + height/3, direction)); break;
+		}
 	}
 
 	public abstract void draw(PApplet window);
@@ -44,21 +56,7 @@ public abstract class Figur {
 	public abstract void move(PApplet window);
 	
 	public Rectangle getBounds() {
-	    return new Rectangle(x, y, size, size);
-	}
-
-	/**
-	 * @return the hp
-	 */
-	public int getHp() {
-		return hp;
-	}
-
-	/**
-	 * @param hp the hp to set
-	 */
-	public void setHp(int hp) {
-		this.hp = hp;
+	    return new Rectangle(x, y, width, height);
 	}
 
 	/**
@@ -76,17 +74,31 @@ public abstract class Figur {
 	}
 
 	/**
-	 * @return the size
+	 * @return the width
 	 */
-	public int getSize() {
-		return size;
+	public int getWidth() {
+		return width;
 	}
 
 	/**
-	 * @param size the size to set
+	 * @param width the width to set
 	 */
-	public void setSize(int size) {
-		this.size = size;
+	public void setWidth(int width) {
+		this.width = width;
+	}
+
+	/**
+	 * @return the height
+	 */
+	public int getHeight() {
+		return height;
+	}
+
+	/**
+	 * @param height the height to set
+	 */
+	public void setHeight(int height) {
+		this.height = height;
 	}
 
 	/**
@@ -129,6 +141,20 @@ public abstract class Figur {
 	 */
 	public void setDirection(Direction direction) {
 		this.direction = direction;
+	}
+
+	/**
+	 * @return the projektilListe
+	 */
+	public ArrayList<Projektil> getProjektilListe() {
+		return projektilListe;
+	}
+
+	/**
+	 * @param projektilListe the projektilListe to set
+	 */
+	public void setProjektilListe(ArrayList<Projektil> projektilListe) {
+		this.projektilListe = projektilListe;
 	}
 
 }

@@ -45,6 +45,34 @@ public class MainController extends PApplet{
 		case SpielEnde: endView.draw(this); break;
 		}
 	}
+	
+	public void mouseClicked() {
+		switch (state) {
+		case Start: mouseClickedStart(); break;
+		case SpielEnde: mouseClickedEnde(); break;
+		default: mouseClickedInGame(); break;
+		}
+	}
+	
+	public void mouseClickedStart() {
+		
+	}
+	
+	public void mouseClickedInGame() {
+		LevelViewController level = null;
+
+		switch (state) {
+		case Level1: level = level1View; break;
+		case Level2: level = level2View; break;
+		default: level = null; break;
+		}
+		
+		level.getRaumschiff().shoot();
+	}
+	
+	public void mouseClickedEnde() {
+		
+	}
 
 	@Override
 	public void keyPressed() {
@@ -90,7 +118,8 @@ public class MainController extends PApplet{
 			case 'w': level.getRaumschiff().setDirection(Figur.Direction.N); level.getRaumschiff().move(this); break; 
 			case 's': level.getRaumschiff().setDirection(Figur.Direction.S); level.getRaumschiff().move(this); break; 
 			case 'a': level.getRaumschiff().setDirection(Figur.Direction.W); level.getRaumschiff().move(this); break; 
-			case 'd': level.getRaumschiff().setDirection(Figur.Direction.E); level.getRaumschiff().move(this); break; 			
+			case 'd': level.getRaumschiff().setDirection(Figur.Direction.E); level.getRaumschiff().move(this); break;
+			case ' ': level.getRaumschiff().shoot(); break; 
 			}
 		}
 		level.checkCollisions();
@@ -100,7 +129,7 @@ public class MainController extends PApplet{
 				endView.restart(this);
 				state = SpielZustand.SpielEnde;
 			}
-		}else if (keyCode == 32) {// KeyCode 32 ist Lertaste
+		}else if (keyCode == 10) {// KeyCode 10 ist "Enter"
 			level.setLevelCompleat(true);
 		}
 

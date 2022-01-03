@@ -5,6 +5,7 @@ import java.awt.Rectangle;
 
 import model.AsteroidenWand;
 import model.Gegner;
+import model.Projektil;
 import model.Raumschiff;
 import processing.core.PApplet;
 
@@ -25,7 +26,7 @@ public abstract class LevelViewController extends View{
 	public abstract void restart(PApplet window);
 	@Override
 	public abstract void draw(PApplet window);
-	
+
 	public void gameOver(PApplet window) {
 		window.fill(100, 0, 1);
 		window.textSize(60);
@@ -46,13 +47,27 @@ public abstract class LevelViewController extends View{
 		}
 
 		for (Gegner g : gegnerListe) {
-
 			Rectangle gBounds = g.getBounds();
+
+			if(g.isBroken()) {
+				gBounds = new Rectangle(-100, -100, 50, 50);
+			}
+
+			for (Projektil p : raumschiff.getProjektilListe()) {
+
+				Rectangle pBounds = p.getBounds();
+
+				if (gBounds.intersects(pBounds)) {
+					g.setBroken(true);
+				}
+			}
 
 			if (rBounds.intersects(gBounds)) {
 				setGameOver(true);
 			}
 		}
+
+
 	}
 
 	/**
