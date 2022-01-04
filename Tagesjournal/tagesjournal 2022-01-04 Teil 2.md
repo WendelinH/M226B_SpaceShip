@@ -3,9 +3,9 @@
 |Titel |Angaben  |
 | --- | --- |
 |Zeit (geplant)|1h|
-|Zeit (tatsÃ¤chlich)| h |
+|Zeit (tatsÃ¤chlich)| 3h |
 |Geplante Ziele| Classendiagramm Updaten. |
-|Erreichte Ziele|  |
-|ausgefÃ¼hrte Arbeiten|  |
-|Probleme|  |
-|Hilfestellung|  |
+|Erreichte Ziele| Classendiagramm Updaten. |
+|ausgefÃ¼hrte Arbeiten| Classendiagramm Updaten. |
+|Probleme| viel zeit und anstrengung gekostet |
+|Hilfestellung| keine |

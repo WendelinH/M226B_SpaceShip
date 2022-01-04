@@ -26,6 +26,9 @@ Stand 06-12-2021
 Stand 09-12-2021
 ![Zweites Classen-Diagramm](Classen-Diagramme/Screenshot_2021-12-09_101626.png)
 
+Stand 04-01-2022
+![Drites Classen-Diagramm](Classen-Diagramme/Screenshot_2022-01-04_231106.png)
+
 ### Entscheiden
 
 ### Realisieren
