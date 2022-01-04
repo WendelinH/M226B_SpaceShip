@@ -10,6 +10,13 @@ import processing.core.PImage;
  */
 public class EndViewController extends View {
 	
+	/**
+	 * Konstruktor
+	 */
+	public EndViewController() {
+		super();
+	}
+
 	@Override
 	public void restart(PApplet window) {
 		setBg(window.loadImage("/img/bg_start.jpg"));

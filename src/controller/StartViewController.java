@@ -11,6 +11,13 @@ import processing.core.PImage;
  */
 public class StartViewController extends View{
 
+	/**
+	 * Konstruktor
+	 */
+	public StartViewController() {
+		super();
+	}
+
 	@Override
 	public void restart(PApplet window) {
 		setBg(window.loadImage("/img/bg_start.jpg"));
