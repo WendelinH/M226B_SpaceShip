@@ -1,5 +1,8 @@
 package controller;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 import model.Figur;
 import processing.core.PApplet;
 
@@ -45,7 +48,7 @@ public class MainController extends PApplet{
 		case SpielEnde: endView.draw(this); break;
 		}
 	}
-	
+
 	public void mouseClicked() {
 		switch (state) {
 		case Start: mouseClickedStart(); break;
@@ -53,11 +56,11 @@ public class MainController extends PApplet{
 		default: mouseClickedInGame(); break;
 		}
 	}
-	
+
 	public void mouseClickedStart() {
-		
+
 	}
-	
+
 	public void mouseClickedInGame() {
 		LevelViewController level = null;
 
@@ -66,12 +69,12 @@ public class MainController extends PApplet{
 		case Level2: level = level2View; break;
 		default: level = null; break;
 		}
-		
+
 		level.getRaumschiff().shoot();
 	}
-	
+
 	public void mouseClickedEnde() {
-		
+
 	}
 
 	@Override
@@ -113,7 +116,7 @@ public class MainController extends PApplet{
 			level = null;
 			break;
 		}
-		if (!level.isGameOver()) {
+		if (!level.isGameOver() && !level.isLevelCompleat()) {
 			switch (key) {
 			case 'w': level.getRaumschiff().setDirection(Figur.Direction.N); level.getRaumschiff().move(this); break; 
 			case 's': level.getRaumschiff().setDirection(Figur.Direction.S); level.getRaumschiff().move(this); break; 

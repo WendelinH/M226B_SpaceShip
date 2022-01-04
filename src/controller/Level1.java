@@ -29,10 +29,10 @@ public class Level1 extends LevelViewController{
 		setLevelCompleat(false);
 		setGameOver(false);
 		
-		Gegner g1 = new Gegner("Hans", 3, 450, 250, Direction.S, 250);
-		Gegner g2 = new Gegner("Peter", 3, 250, 450, Direction.E, 150);
-		getGegnerListe().add(g1);
-		getGegnerListe().add(g2);
+		Gegner g1 = new Gegner("Hans", 1, 400, 250, Direction.S, 250);
+		Gegner g2 = new Gegner("Peter", 1, 250, 450, Direction.E, 250);
+		attach(g1);
+		attach(g2);
 		
 		AsteroidenWand a1 = new AsteroidenWand(50, 50, 300, 20);
 		AsteroidenWand a2 = new AsteroidenWand(50, 100, 60, 60);
@@ -70,6 +70,9 @@ public class Level1 extends LevelViewController{
 		
 		if (isGameOver()) {
 			gameOver(window);
+		}
+		if (isLevelCompleat()) {
+			levelCompleat(window);
 		}
 	}
 

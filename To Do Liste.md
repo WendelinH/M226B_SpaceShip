@@ -19,9 +19,9 @@ Alles beschreiben (Klassen-Diagramm, Bilder, Code-Snipped, Geplant / doch anders
 
 # To Do Liste
 0. ~~To Do Liste erstellen~~
-1. Interface einbauen
-2. Gegner shoot
-3. Level ende
+1. ~~Interface einbauen~~
+2. ~~Gegner shoot~~
+3. ~~Level ende~~
 4. Classendiagram updaten
 5. Level designes
 6. Anforderungen an das Projekt und seine bewertung auf Teams anschauen und überprüfen ob alles erfült wirt?

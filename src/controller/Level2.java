@@ -43,6 +43,9 @@ public class Level2 extends LevelViewController{
 		if (isGameOver()) {
 			gameOver(window);
 		}
+		if (isLevelCompleat()) {
+			levelCompleat(window);
+		}
 	}
 
 	

@@ -1,10 +1,14 @@
 package model;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
+import controller.Observer;
 import processing.core.PApplet;
 import processing.core.PFont;
 import processing.core.PImage;
 
-public class Gegner extends Figur{
+public class Gegner extends Figur implements Observer{
 
 	private String name;
 	private boolean broken;
@@ -103,6 +107,38 @@ public class Gegner extends Figur{
 	 */
 	public void setBroken(boolean broken) {
 		this.broken = broken;
+	}
+
+	/**
+	 * Das sind die Funktionen die ein Observer braucht.
+	 */
+
+	@Override
+	public void update(String nachricht) {
+		if(nachricht == "Jemand ist KO gegangen.") {
+			Timer timer = new Timer();
+			int defaultSpeed = getSpeed();
+			//vor Sekunde 1
+			setSpeed(getSpeed() * 6);
+
+			for(int i = 0;i < 9;i ++) {
+				// nach i Sek geht’s los
+				timer.schedule  ( new TimerTask(){
+					public void run() {
+						if(!broken) {
+							shoot();
+						}
+					}
+				}, 1000 * i);
+			}
+
+			// nach 10 Sek geht’s los
+			timer.schedule  ( new TimerTask(){
+				public void run() {
+					setSpeed(defaultSpeed);
+				}
+			}, 10000 );
+		}
 	}
 
 }

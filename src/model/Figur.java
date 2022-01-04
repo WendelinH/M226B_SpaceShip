@@ -44,10 +44,10 @@ public abstract class Figur {
 	
 	public void shoot() {
 		switch(direction) {
-		case N: projektilListe.add(new Projektil(6, 5, 15, x + width/2, y + height/3, direction)); break;
-		case E: projektilListe.add(new Projektil(6, 15, 5, x + width/2, y + height/3, direction)); break;
-		case S: projektilListe.add(new Projektil(6, 5, 15, x + width/2, y + height/3, direction)); break;
-		case W: projektilListe.add(new Projektil(6, 15, 5, x + width/2, y + height/3, direction)); break;
+		case N: projektilListe.add(new Projektil(speed * 3, 5, 15, x + width/2, y + height/3, direction)); break;
+		case E: projektilListe.add(new Projektil(speed * 3, 15, 5, x + width/2, y + height/3, direction)); break;
+		case S: projektilListe.add(new Projektil(speed * 3, 5, 15, x + width/2, y + height/3, direction)); break;
+		case W: projektilListe.add(new Projektil(speed * 3, 15, 5, x + width/2, y + height/3, direction)); break;
 		}
 	}
 

@@ -1,6 +1,8 @@
 package controller;
 
 import java.util.ArrayList;
+import java.util.Timer;
+import java.util.TimerTask;
 import java.awt.Rectangle;
 
 import model.AsteroidenWand;
@@ -15,7 +17,7 @@ import processing.core.PApplet;
  * @author Wendelin
  *
  */
-public abstract class LevelViewController extends View{
+public abstract class LevelViewController extends View implements Subject{
 
 	private Raumschiff raumschiff;
 	private EndPortal endPortal;
@@ -33,6 +35,11 @@ public abstract class LevelViewController extends View{
 		window.fill(100, 0, 1);
 		window.textSize(60);
 		window.text("GAME OVER", 200,100);
+	}
+	public void levelCompleat(PApplet window) {
+		window.fill(0, 100, 1);
+		window.textSize(60);
+		window.text("Level Compleat", 200,100);
 	}
 
 	public void checkCollisions() {
@@ -68,6 +75,7 @@ public abstract class LevelViewController extends View{
 
 				if (gBounds.intersects(pBounds)) {
 					g.setBroken(true);
+					notifyAllObserver("Jemand ist KO gegangen.");
 				}
 			}
 			
@@ -166,6 +174,27 @@ public abstract class LevelViewController extends View{
 	 */
 	public void setGameOver(boolean gameOver) {
 		this.gameOver = gameOver;
+	}
+	
+	/**
+	 * Das sind die Funktionen die das Subject braucht.
+	 */
+
+	@Override
+	public void attach(Observer observer) {
+		gegnerListe.add((Gegner) observer);
+	}
+
+	@Override
+	public void detach(Observer observer) {
+		gegnerListe.remove((Gegner) observer);
+	}
+
+	@Override
+	public void notifyAllObserver(String nachricht) {
+		for(Gegner g : gegnerListe) {
+			g.update(nachricht);
+		}
 	}
 
 }
