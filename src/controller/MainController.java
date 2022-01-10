@@ -124,7 +124,6 @@ public class MainController extends PApplet{
 			case 'd': level.getRaumschiff().setDirection(Figur.Direction.E); level.getRaumschiff().move(this); break;
 			}
 		}
-		level.checkCollisions();
 
 		if (level.isLevelCompleat() || level.isGameOver()) {
 			if (keyCode == 10) {// KeyCode 10 ist "Enter"

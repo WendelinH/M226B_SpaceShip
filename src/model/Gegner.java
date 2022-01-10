@@ -12,17 +12,19 @@ public class Gegner extends Figur implements Observer{
 
 	private String name;
 	private boolean broken;
+	private int topSpeed;
 	private int startXPos;
 	private int startYPos;
 	private int endXPos;
 	private int endYPos;
 
-	public Gegner(String name, int speed, int x, int y, Direction direction, int moveDistanc) {
+	public Gegner(String name, int speed, int x, int y, Direction direction, int moveDistanc, PApplet window) {
 		super(speed, 50, 50, x, y, direction);
 		this.name = name;
 		this.startXPos = x;
 		this.startYPos = y;
 		this.broken = false;
+		this.topSpeed = speed * 3;
 
 		switch (getDirection()) {
 		case N: endXPos = x; endYPos = y - moveDistanc; break; 
@@ -41,6 +43,11 @@ public class Gegner extends Figur implements Observer{
 			startYPos = endYPos;
 			endYPos = temp;
 		}
+		
+		setImg_N(window.loadImage("/img/gegner_N.png"));
+		setImg_E(window.loadImage("/img/gegner_E.png"));
+		setImg_S(window.loadImage("/img/gegner_S.png"));
+		setImg_W(window.loadImage("/img/gegner_W.png"));
 	}
 
 	@Override
@@ -55,10 +62,10 @@ public class Gegner extends Figur implements Observer{
 		window.rect(getX(), getY(), getWidth(), getHeight());
 		PImage img = null;
 		switch (getDirection()) {
-		case N: img = window.loadImage("/img/gegner_N.png"); break; 
-		case E: img = window.loadImage("/img/gegner_E.png"); break; 
-		case S: img = window.loadImage("/img/gegner_S.png"); break; 
-		case W: img = window.loadImage("/img/gegner_W.png"); break; 			
+		case N: img = getImg_N(); break; 
+		case E: img = getImg_E(); break; 
+		case S: img = getImg_S(); break; 
+		case W: img = getImg_W(); break; 			
 		}
 
 		for (Projektil p : getProjektilListe()) {
@@ -119,7 +126,7 @@ public class Gegner extends Figur implements Observer{
 			Timer timer = new Timer();
 			int defaultSpeed = getSpeed();
 			//vor Sekunde 1
-			setSpeed(getSpeed() * 6);
+			setSpeed(topSpeed);
 
 			for(int i = 0;i < 9;i ++) {
 				// nach i Sek geht’s los

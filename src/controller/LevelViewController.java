@@ -46,10 +46,11 @@ public abstract class LevelViewController extends View implements Subject{
 
 		Rectangle rBounds = raumschiff.getBounds();
 		Rectangle eBounds = endPortal.getBounds();
+		int eX = (int) eBounds.getX() + 25;
+		int eY = (int) eBounds.getY() + 25;
 		
-		if (rBounds.intersects(eBounds)) {
+		if (rBounds.contains(eX, eY)) {
 			setLevelCompleat(true);
-			System.out.println("Level Compleat.!");
 		}
 
 		for (AsteroidenWand a : asteroidenListe) {

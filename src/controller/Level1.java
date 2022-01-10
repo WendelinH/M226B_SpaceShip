@@ -23,36 +23,50 @@ public class Level1 extends LevelViewController{
 		getGegnerListe().clear();
 		getAsteroidenListe().clear();
 		
-		setRaumschiff(new Raumschiff(3, 100, 650, Direction.N));
+		setRaumschiff(new Raumschiff(3, 20, 680, Direction.N, window));
 		setEndPortal(new EndPortal(700, 0));
 		
 		setLevelCompleat(false);
 		setGameOver(false);
 		
-		Gegner g1 = new Gegner("Hans", 1, 400, 250, Direction.S, 250);
-		Gegner g2 = new Gegner("Peter", 1, 250, 450, Direction.E, 250);
+		Gegner g1 = new Gegner("Hans", 1, 0, 150, Direction.S, 250, window);
+		Gegner g2 = new Gegner("Peter", 1, 50, 250, Direction.E, 250, window);
+		Gegner g3 = new Gegner("Ueli", 1, 100, 200, Direction.N, 50, window);
+		Gegner g4 = new Gegner("Gary", 1, 355, 530, Direction.S, 120, window);
+		Gegner g5 = new Gegner("Ralf", 3, 640, 580, Direction.W, 200, window);
+		Gegner g6 = new Gegner("SPEED", 6, 355, 475, Direction.W, 400, window);
+		
 		attach(g1);
 		attach(g2);
+		attach(g3);
+		attach(g4);
+		attach(g5);
+		attach(g6);
 		
-		AsteroidenWand a1 = new AsteroidenWand(50, 50, 300, 20);
-		AsteroidenWand a2 = new AsteroidenWand(50, 100, 60, 60);
-		AsteroidenWand a3 = new AsteroidenWand(150, 90, 150, 10);
-		AsteroidenWand a4 = new AsteroidenWand(250, 250, 90, 30);
-		AsteroidenWand a5 = new AsteroidenWand(500, 100, 240, 240);
+		AsteroidenWand a1 = new AsteroidenWand(0, 300, 440, 50, window);
+		AsteroidenWand a2 = new AsteroidenWand(500, 300, 50, 50, window);
+		AsteroidenWand a3 = new AsteroidenWand(500, 50, 250, 250, window);
+		for (int i = 0; i < 5; i++) {
+			AsteroidenWand a = new AsteroidenWand(70*i, 580, 70, 75, window);
+			getAsteroidenListe().add(a);
+		}
+		
+		AsteroidenWand a4 = new AsteroidenWand(410, 580, 30, 70, window);
+		AsteroidenWand a5 = new AsteroidenWand(410, 475, 50, 50, window);
+		AsteroidenWand a6 = new AsteroidenWand(60, 60, 440, 50, window);
+		
 		getAsteroidenListe().add(a1);
 		getAsteroidenListe().add(a2);
 		getAsteroidenListe().add(a3);
 		getAsteroidenListe().add(a4);
 		getAsteroidenListe().add(a5);
+		getAsteroidenListe().add(a6);
 		
 	}
 
 	@Override
 	public void draw(PApplet window) {
 		window.background(getBg());
-		window.fill(255);
-		window.textSize(30);
-		window.text("Level 1", 20,30);
 		
 		getEndPortal().draw(window);
 
@@ -63,7 +77,7 @@ public class Level1 extends LevelViewController{
 			g.move(window);
 			g.draw(window);
 		}
-
+		
 		checkCollisions();
 
 		getRaumschiff().draw(window);
@@ -74,6 +88,10 @@ public class Level1 extends LevelViewController{
 		if (isLevelCompleat()) {
 			levelCompleat(window);
 		}
+		
+		window.fill(255);
+		window.textSize(30);
+		window.text("Level 1", 20,30);
 	}
 
 }

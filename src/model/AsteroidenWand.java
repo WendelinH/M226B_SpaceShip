@@ -21,15 +21,16 @@ public class AsteroidenWand {
 	 * @param x
 	 * @param y
 	 */
-	public AsteroidenWand(int x, int y, int width, int height) {
+	public AsteroidenWand(int x, int y, int width, int height, PApplet window) {
 		this.x = x;
 		this.y = y;
 		this.width = width;
 		this.height = height;
+		
+		this.img = window.loadImage("/img/asteroid.png");
 	}
 	
 	public void draw(PApplet window) {
-		img = window.loadImage("/img/asteroid.png");
 		window.stroke(100, 0, 0);
 		window.strokeWeight(1);
 		window.noFill();

@@ -5,8 +5,12 @@ import processing.core.PImage;
 
 public class Raumschiff extends Figur{
 
-	public Raumschiff(int speed, int x, int y, Direction direction) {
+	public Raumschiff(int speed, int x, int y, Direction direction, PApplet window) {
 		super(speed, 50, 50, x, y, direction);
+		setImg_N(window.loadImage("/img/spaceship_N.png"));
+		setImg_E(window.loadImage("/img/spaceship_E.png"));
+		setImg_S(window.loadImage("/img/spaceship_S.png"));
+		setImg_W(window.loadImage("/img/spaceship_W.png"));
 	}
 
 	@Override
@@ -17,10 +21,10 @@ public class Raumschiff extends Figur{
 		window.rect(getX(), getY(), getWidth(), getHeight());
 		PImage img = null;
 		switch (getDirection()) {
-		case N: img = window.loadImage("/img/spaceship_N.png"); break; 
-		case E: img = window.loadImage("/img/spaceship_E.png"); break; 
-		case S: img = window.loadImage("/img/spaceship_S.png"); break; 
-		case W: img = window.loadImage("/img/spaceship_W.png"); break; 			
+		case N: img = getImg_N(); break; 
+		case E: img = getImg_E(); break; 
+		case S: img = getImg_S(); break; 
+		case W: img = getImg_W(); break; 			
 		}
 		
 		for (Projektil p : getProjektilListe()) {
