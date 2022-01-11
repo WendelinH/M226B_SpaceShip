@@ -24,14 +24,14 @@ Alles beschreiben (Klassen-Diagramm, Bilder, Code-Snipped, Geplant / doch anders
 3. ~~Level ende~~
 4. Classendiagram updaten 
 ```diff
-- **WICHTIG**
+- WICHTIG
 ```
 
 5. ~~Level designes~~
 6. ~~Anforderungen an das Projekt und seine bewertung auf Teams anschauen und überprüfen ob alles erfült wirt?~~
 7. Tests erstellen auch Mockup 
 ```diff
-+ **Test 1 von 3 schon erstellt.**
++ Test 1 von 3 schon erstellt.
 ```
 
 8. JavaDoc erstellen
