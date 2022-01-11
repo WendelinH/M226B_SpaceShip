@@ -78,6 +78,11 @@ public class Gegner extends Figur implements Observer{
 		PFont f = window.createFont("Consolas",16,true);
 		window.textFont(f,16);
 		window.textSize(16);
+		if(broken) {
+			window.fill(0, 150, 0);
+		}else {
+			window.fill(150, 0, 0);
+		}
 		window.text(name, getX(), getY());
 	}
 

@@ -29,14 +29,18 @@ public class Level2 extends LevelViewController{
 		setLevelCompleat(false);
 		setGameOver(false);
 
-		Gegner g1 = new Gegner("Walter 1", 1, 240, 150, Direction.S, 250, window);
-		Gegner g2 = new Gegner("Walter 2", 1, 200, 395, Direction.E, 250, window);
-		Gegner g3 = new Gegner("Walter 3", 1, 500, 245, Direction.W, 350, window);
-		Gegner g4 = new Gegner("Walter 4", 1, 90, 525, Direction.N, 450, window);
+		Gegner g1 = new Gegner("Willi 1", 1, 240, 150, Direction.S, 250, window);
+		Gegner g2 = new Gegner("Willi 2", 1, 200, 395, Direction.E, 250, window);
+		Gegner g3 = new Gegner("Willi 3", 1, 500, 245, Direction.W, 350, window);
+		Gegner g4 = new Gegner("Willi 4", 1, 90, 525, Direction.N, 450, window);
+		Gegner g5 = new Gegner("Willi 5", 5, 540, 90, Direction.S, 600, window);
+		Gegner g6 = new Gegner("Willi 6", 10, 690, 690, Direction.N, 600, window);
 		attach(g1);
 		attach(g2);
 		attach(g3);
 		attach(g4);
+		attach(g5);
+		attach(g6);
 
 		int x = 0;
 		int y = 0;

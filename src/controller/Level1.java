@@ -29,12 +29,13 @@ public class Level1 extends LevelViewController{
 		setLevelCompleat(false);
 		setGameOver(false);
 		
-		Gegner g1 = new Gegner("Hans", 1, 0, 150, Direction.S, 250, window);
-		Gegner g2 = new Gegner("Peter", 1, 50, 250, Direction.E, 250, window);
-		Gegner g3 = new Gegner("Ueli", 1, 100, 200, Direction.N, 50, window);
-		Gegner g4 = new Gegner("Gary", 1, 355, 530, Direction.S, 120, window);
-		Gegner g5 = new Gegner("Ralf", 3, 640, 580, Direction.W, 200, window);
-		Gegner g6 = new Gegner("SPEED", 6, 355, 475, Direction.W, 400, window);
+		Gegner g1 = new Gegner("Hans", 1, 0, 60, Direction.S, 190, window);
+		Gegner g2 = new Gegner("Peter", 2, 160, 175, Direction.E, 290, window);
+		Gegner g3 = new Gegner("Pan", 2, 450, 230, Direction.W, 290, window);
+		Gegner g4 = new Gegner("Ueli", 1, 110, 115, Direction.S, 135, window);
+		Gegner g5 = new Gegner("Gary", 1, 355, 650, Direction.N, 120, window);
+		Gegner g6 = new Gegner("Ralf", 4, 700, 580, Direction.W, 260, window);
+		Gegner g7 = new Gegner("SPEED", 6, 355, 475, Direction.W, 355, window);
 		
 		attach(g1);
 		attach(g2);
@@ -42,6 +43,7 @@ public class Level1 extends LevelViewController{
 		attach(g4);
 		attach(g5);
 		attach(g6);
+		attach(g7);
 		
 		AsteroidenWand a1 = new AsteroidenWand(0, 300, 440, 50, window);
 		AsteroidenWand a2 = new AsteroidenWand(500, 300, 50, 50, window);
@@ -53,6 +55,10 @@ public class Level1 extends LevelViewController{
 		
 		AsteroidenWand a4 = new AsteroidenWand(410, 580, 30, 70, window);
 		AsteroidenWand a5 = new AsteroidenWand(410, 475, 50, 50, window);
+		for (int i = 0; i < 7; i++) {
+			AsteroidenWand a = new AsteroidenWand(40*i+460, 475-20*i, 80, 40, window);
+			getAsteroidenListe().add(a);
+		}
 		AsteroidenWand a6 = new AsteroidenWand(60, 60, 440, 50, window);
 		
 		getAsteroidenListe().add(a1);

@@ -50,6 +50,7 @@ public class MainController extends PApplet{
 	}
 
 	public void mouseClicked() {
+		System.out.println(mouseX + " : " + mouseY);
 		switch (state) {
 		case Start: mouseClickedStart(); break;
 		case SpielEnde: mouseClickedEnde(); break;
