@@ -25,7 +25,7 @@ Alles beschreiben (Klassen-Diagramm, Bilder, Code-Snipped, Geplant / doch anders
 4. Classendiagram updaten <span style="color:red">**WICHTIG**</span>
 5. ~~Level designes~~
 6. ~~Anforderungen an das Projekt und seine bewertung auf Teams anschauen und überprüfen ob alles erfült wirt?~~
-7. Tests erstellen auch Mockup
+7. Tests erstellen auch Mockup <span style="color:green">**Test 1 von 3 schon erstellt.**</span>
 8. JavaDoc erstellen
 9. Zeitplan Verfollständigen und
 10. Dokumentation des Projekts ungefähr 10 Seiten auch TagesJournal verwenden.
