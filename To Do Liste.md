@@ -29,21 +29,22 @@ Alles beschreiben (Klassen-Diagramm, Bilder, Code-Snipped, Geplant / doch anders
 
 5. ~~Level designes~~
 6. ~~Anforderungen an das Projekt und seine bewertung auf Teams anschauen und überprüfen ob alles erfült wirt?~~
-7. Tests erstellen auch Mockup 
+7. ~~Tests erstellen auch Mockup~~
 ```diff
-+ Test 1 von 3 schon erstellt.
++ Test 3 von 3 schon erstellt.
 ```
 
 8. JavaDoc erstellen
-9.  Zeitplan Verfollständigen und
+9.  Zeitplan Verfollständigen und Vor-her und Nach-her 
 10. Dokumentation des Projekts ungefähr 10 Seiten auch TagesJournal verwenden.
-11. - Klassendiagramm
-12. - Zeitplan
-13. - Bilder und Code-snipped(Aktualisieren und vileicht auch neue wie Colision oder der gleichen.)
-14. - Text und beschreibungen
-15. - Tagesjournal verwenden um einen roten faden des Projektes erleutern zu können.
-16. Anforderungen an das Projekt und seine bewertung auf Teams anschauen und überprüfen ob alles erfült wirt?
-17. ...
+11. - Spiel Prinzip und wie es funktioniert
+12. - Klassendiagramm beschreiben (Vererbung und Interface) warum? wo?
+13. - Zeitplan
+14. - Bilder und Code-snipped(Aktualisieren und vileicht auch neue wie Colision oder der gleichen.)
+15. - Text und beschreibungen
+16. - Tagesjournal verwenden um einen roten faden des Projektes erleutern zu können.
+17. Anforderungen an das Projekt und seine bewertung auf Teams anschauen und überprüfen ob alles erfült wirt?
+18. ...
 
 
 
