@@ -13,7 +13,8 @@ import model.Raumschiff;
 import processing.core.PApplet;
 
 /**
- * Diese Classe stelt das erste Level dar.
+ * Diese Klasse LevelViewController ist eine abstracte Klasse.<br>
+ * Diese Klasse erbt von der View-Klasse und implementiert das Subject-Interface.
  * @author Wendelin
  *
  */
@@ -25,23 +26,46 @@ public abstract class LevelViewController extends View implements Subject{
 	private ArrayList<Gegner> gegnerListe = new ArrayList<>();
 	private boolean levelCompleat = false;
 	private boolean gameOver = false;
-
+	
+	/**
+	 * Das ist eine Abstracte Methode die nur einmahl ausgeführt wird um alles zurück zu setzen 
+	 * oder neu zu erstellen befor das Level begint.
+	 * @param window : PApplet
+	 */
 	@Override
 	public abstract void restart(PApplet window);
+	
+	/**
+	 * Das ist eine Abstracte Methode die das Level zeichnen soll.
+	 * @param window : PApplet
+	 */
 	@Override
 	public abstract void draw(PApplet window);
-
+	
+	/**
+	 * Diese Methode zeichnet eine "GAME OVER" Schriftzug.
+	 * @param window : PApplet
+	 */
 	public void gameOver(PApplet window) {
 		window.fill(100, 0, 1);
 		window.textSize(60);
 		window.text("GAME OVER", 200,100);
 	}
+	
+	/**
+	 * Diese Methode zeichnet eine "Level Compleat" Schriftzug.
+	 * @param window : PApplet
+	 */
 	public void levelCompleat(PApplet window) {
 		window.fill(0, 100, 1);
 		window.textSize(60);
 		window.text("Level Compleat", 200,100);
 	}
-
+	
+	/**
+	 * Diese Methode überprüft ob etwas colidiert und 
+	 * wenn es dazu kommt werden entsprechende Attribute verändert oder Methoden aufgerufen.
+	 */
 	public void checkCollisions() {
 
 		Rectangle rBounds = raumschiff.getBounds();
@@ -178,19 +202,26 @@ public abstract class LevelViewController extends View implements Subject{
 	}
 	
 	/**
-	 * Das sind die Funktionen die das Subject braucht.
+	 * Diese Methode fügt Observer-Objekte der GegnerListe hinzu.
+	 * @param observer das Objekt das hinzugefügt werden soll.
 	 */
-
 	@Override
 	public void attach(Observer observer) {
 		gegnerListe.add((Gegner) observer);
 	}
-
+	
+	/**
+	 * Diese Methode entfernt Observer-Objekte fon der GegnerListe.
+	 * @param observer das Objekt das entfernt werden soll.
+	 */
 	@Override
 	public void detach(Observer observer) {
 		gegnerListe.remove((Gegner) observer);
 	}
-
+	/**
+	 * Diese Methode übermitelt allen Observer der GegnerListe eine Nachricht.
+	 * @param nachricht die Nachricht die allen Observer übermitelt werden soll.
+	 */
 	@Override
 	public void notifyAllObserver(String nachricht) {
 		for(Gegner g : gegnerListe) {

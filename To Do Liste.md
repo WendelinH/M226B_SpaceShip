@@ -34,9 +34,12 @@ Alles beschreiben (Klassen-Diagramm, Bilder, Code-Snipped, Geplant / doch anders
 + Test 3 von 3 schon erstellt.
 ```
 
-8. JavaDoc erstellen
+8. JavaDoc erstellen ~~Eint teil~~
 9.  Zeitplan Verfollständigen und Vor-her und Nach-her 
 10. Dokumentation des Projekts ungefähr 10 Seiten auch TagesJournal verwenden.
+```diff
+- Dokumentation als PDF
+```
 11. - Spiel Prinzip und wie es funktioniert
 12. - Klassendiagramm beschreiben (Vererbung und Interface) warum? wo?
 13. - Zeitplan

@@ -7,15 +7,28 @@ import model.Figur.Direction;
 import model.Gegner;
 import processing.core.PApplet;
 
+/**
+ * Das ist die Level1-Klasse und zeichnet das erste Level.<br>
+ * Diese Klasse erbt von der LevelViewController-Klasse
+ * @author Wendelin
+ *
+ */
 public class Level1 extends LevelViewController{
 	
 	/**
-	 * Konstruktor
+	 * Konstruktor der Level1-Klasse<br>
+	 * Es wird der Konstrukter der Eltern-Klasse aufgerufen sonst nichts.
 	 */
 	public Level1() {
 		super();
 	}
-
+	
+	/**
+	 * Die restart-Methode wird nur einmal ausgefürt befohr das erste Level angezeigt wirt und ladet dan das Hintergrundbild
+	 * und resetet alle Gegner und erstelt alle AsteoiderWende.<br>
+	 * Auch das Raumschiff wird zurükgesetzt.
+	 * @param window : PApplet
+	 */
 	@Override
 	public void restart(PApplet window) {
 		setBg(window.loadImage("/img/level1_bg.png"));
@@ -67,9 +80,13 @@ public class Level1 extends LevelViewController{
 		getAsteroidenListe().add(a4);
 		getAsteroidenListe().add(a5);
 		getAsteroidenListe().add(a6);
-		
 	}
-
+	
+	/**
+	 * Die draw-Methode Zeichnet das erste Level.<br>
+	 * Mit Hintergrund und Schriftzug und Gegner, AsteroidenWende, Endportal und das Raumschiff.
+	 * @param window : PApplet
+	 */
 	@Override
 	public void draw(PApplet window) {
 		window.background(getBg());
@@ -99,5 +116,4 @@ public class Level1 extends LevelViewController{
 		window.textSize(30);
 		window.text("Level 1", 20,30);
 	}
-
 }

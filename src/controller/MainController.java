@@ -1,13 +1,11 @@
 package controller;
 
-import java.util.Timer;
-import java.util.TimerTask;
-
 import model.Figur;
 import processing.core.PApplet;
 
 /**
- * Dies ist die MainController Classe
+ * Dies ist die MainController Classe die dient dazu alls zu controllieren und steuern.<br>
+ * Diese Klasse erbt von der PApplet-Klasse
  * @author Wendelin
  *
  */
@@ -17,28 +15,44 @@ public class MainController extends PApplet{
 	private Level1 level1View = new Level1();
 	private Level2 level2View = new Level2();
 	private EndViewController endView = new EndViewController();
-
+	
+	/**
+	 * Das ist ein enum zur Status-controlle des Spieles.
+	 *
+	 */
 	enum SpielZustand{
 		Start, Level1, Level2, SpielEnde;
-
 	}
-
+	
 	SpielZustand state = SpielZustand.Start;
-
+	
+	/**
+	 * Das ist die Main Methode hier startet das ganze Spiel.
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		//startet das Fenster
 		PApplet.main("controller.MainController");
 	}
-
+	
+	/**
+	 * Bei dieser Methode werden die Settings des Fensters definiert.
+	 */
 	public void settings() {
 		size(750,750);
 	}
-
+	
+	/**
+	 * Die setup Methode wird nur einmahl ausgefürt und erledigt die benötigten vorbereitungen.
+	 */
 	@Override
 	public void setup() {
 		startView.restart(this);
 	}
-
+	
+	/**
+	 * In der draw Methode werden die einzelnen Statuse des Spiels gezeichenet.
+	 */
 	@Override
 	public void draw() {
 		switch (state) {
@@ -48,20 +62,26 @@ public class MainController extends PApplet{
 		case SpielEnde: endView.draw(this); break;
 		}
 	}
-
+	
+	/**
+	 * In dieser Methode wird ein Maus click verarbeitet und entsprechend zum Status des Spiels Methoden aufgerufen.
+	 */
 	public void mouseClicked() {
-		System.out.println(mouseX + " : " + mouseY);
 		switch (state) {
 		case Start: mouseClickedStart(); break;
 		case SpielEnde: mouseClickedEnde(); break;
 		default: mouseClickedInGame(); break;
 		}
 	}
-
-	public void mouseClickedStart() {
-
-	}
-
+	
+	/**
+	 * In dieser Methode werden die Mous clicks verarbeitet wen man im Start bildschirm ist.
+	 */
+	public void mouseClickedStart() {}
+	
+	/**
+	 * In dieser Methode werden die Mous clicks verarbeitet wen man im In Game ist also in einem Level.
+	 */
 	public void mouseClickedInGame() {
 		LevelViewController level = null;
 
@@ -73,11 +93,15 @@ public class MainController extends PApplet{
 
 		level.getRaumschiff().shoot();
 	}
-
-	public void mouseClickedEnde() {
-
-	}
-
+	
+	/**
+	 * In dieser Methode werden die Mous clicks verarbeitet wen man im Ende bildschirm ist.
+	 */
+	public void mouseClickedEnde() {}
+	
+	/**
+	 * In dieser Methode wird ein Tastatur eingabe verarbeitet und entsprechend zum Status des Spiels eine Methoden aufgerufen.
+	 */
 	@Override
 	public void keyPressed() {
 
@@ -86,8 +110,6 @@ public class MainController extends PApplet{
 		case SpielEnde: keyPressedEnde(); break;
 		default: keyPressedInGame(); break;
 		}
-
-		System.out.println(state +" "+ key +" "+ str(keyCode));
 	}
 
 	/**
@@ -105,7 +127,7 @@ public class MainController extends PApplet{
 	}
 
 	/**
-	 * Das ist die keyPressed wärent dem Spielen.
+	 * Das ist die keyPressed wärent dem Spielen also in den Levels.
 	 */
 	public void keyPressedInGame() {
 		LevelViewController level = null;
@@ -132,10 +154,6 @@ public class MainController extends PApplet{
 				state = SpielZustand.SpielEnde;
 			}
 		}
-
-		System.out.println("Kordinaten (" + level.getRaumschiff().getX() + "/" + level.getRaumschiff().getY() + ")");
-		System.out.println("ProjektileAnzahl " + level.getRaumschiff().getProjektilListe().size());
-
 	}
 
 	/**
@@ -147,5 +165,4 @@ public class MainController extends PApplet{
 			state = SpielZustand.Start;
 		}
 	}
-
 }

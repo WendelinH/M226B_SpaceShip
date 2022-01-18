@@ -7,15 +7,28 @@ import model.Raumschiff;
 import model.Figur.Direction;
 import processing.core.PApplet;
 
+/**
+ * Das ist die Level2-Klasse und zeichnet das zweite Level.<br>
+ * Diese Klasse erbt von der LevelViewController-Klasse
+ * @author Wendelin
+ *
+ */
 public class Level2 extends LevelViewController{
 
 	/**
-	 * Konstruktor
+	 * Konstruktor der Level2-Klasse<br>
+	 * Es wird der Konstrukter der Eltern-Klasse aufgerufen sonst nichts.
 	 */
 	public Level2() {
 		super();
 	}
-
+	
+	/**
+	 * Die restart-Methode wird nur einmal ausgefürt befohr das zweiten Level angezeigt wirt und ladet dan das Hintergrundbild
+	 * und resetet alle Gegner und erstelt alle AsteoiderWende.<br>
+	 * Auch das Raumschiff wird zurükgesetzt.
+	 * @param window : PApplet
+	 */
 	@Override
 	public void restart(PApplet window) {
 		setBg(window.loadImage("/img/level1_bg.png"));
@@ -58,9 +71,13 @@ public class Level2 extends LevelViewController{
 				}
 			}
 		}
-
 	}
-
+	
+	/**
+	 * Die draw-Methode Zeichnet das zweite Level.
+	 * Mit Hintergrund und Schriftzug und Gegner, AsteroidenWende, Endportal und das Raumschiff.
+	 * @param window : PApplet
+	 */
 	@Override
 	public void draw(PApplet window) {
 		window.background(getBg());
@@ -90,7 +107,4 @@ public class Level2 extends LevelViewController{
 		window.textSize(30);
 		window.text("Level 2", 20,30);
 	}
-
-
-
 }
