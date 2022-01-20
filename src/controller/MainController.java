@@ -28,7 +28,7 @@ public class MainController extends PApplet{
 	
 	/**
 	 * Das ist die Main Methode hier startet das ganze Spiel.
-	 * @param args
+	 * @param args args
 	 */
 	public static void main(String[] args) {
 		//startet das Fenster

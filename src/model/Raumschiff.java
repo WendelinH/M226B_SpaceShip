@@ -13,11 +13,10 @@ public class Raumschiff extends Figur{
 	/**
 	 * Konstruktor der Raumschiff-Klasse
 	 * @param speed : int Geschwindikeit des Raumschiff
-	 * @param width : int breite
-	 * @param height : int höhe
 	 * @param x : xPosition
 	 * @param y : yPosition
 	 * @param direction : Direction die richtung in die das Raumschiff fliegt.
+	 * @param window : PApplet
 	 */
 	public Raumschiff(int speed, int x, int y, Direction direction, PApplet window) {
 		super(speed, 50, 50, x, y, direction);

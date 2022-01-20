@@ -57,14 +57,14 @@ public class AsteroidenWand {
 	}
 
 	/**
-	 * @return the weight
+	 * @return the width
 	 */
 	public int getWidth() {
 		return width;
 	}
 
 	/**
-	 * @param weight the weight to set
+	 * @param width the width to set
 	 */
 	public void setWidth(int width) {
 		this.width = width;
