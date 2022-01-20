@@ -5,6 +5,11 @@ import java.awt.Rectangle;
 import processing.core.PApplet;
 import processing.core.PImage;
 
+/**
+ * Die AsteroidenWand-Klasse ist ein hindernis für das Raumschiff in form eines Asteroiden.
+ * @author Wendelin
+ *
+ */
 public class AsteroidenWand {
 	
 	private int width;
@@ -15,11 +20,12 @@ public class AsteroidenWand {
 	PImage img = null;
 	
 	/**
-	 * 
-	 * @param weight
-	 * @param height
-	 * @param x
-	 * @param y
+	 * Dieser Konstrukor erstellt ein AsteroidenWand-Object mit den Attributen und den Werten der Parameter.
+	 * @param x : int xPosition
+	 * @param y : int yPosition
+	 * @param width : int breite
+	 * @param height : int höhe
+	 * @param window : PApplet
 	 */
 	public AsteroidenWand(int x, int y, int width, int height, PApplet window) {
 		this.x = x;
@@ -30,6 +36,10 @@ public class AsteroidenWand {
 		this.img = window.loadImage("/img/asteroid.png");
 	}
 	
+	/**
+	 * Diese draw-Methode zeichnet die AsteroidenWand.
+	 * @param window : PApplet
+	 */
 	public void draw(PApplet window) {
 		window.stroke(100, 0, 0);
 		window.strokeWeight(1);
@@ -38,6 +48,10 @@ public class AsteroidenWand {
 		window.image(img,x,y,width,height);
 	}
 	
+	/**
+	 * Diese Methode giebt ein Ractangle-Object zurück das die Collisionbox der AsteroidenWand darstellt.
+	 * @return new Rectangle(x, y, width, height)
+	 */
 	public Rectangle getBounds() {
 	    return new Rectangle(x, y, width, height);
 	}

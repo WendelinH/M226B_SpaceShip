@@ -6,6 +6,11 @@ import processing.core.PImage;
 import java.awt.Rectangle;
 import java.util.ArrayList;
 
+/**
+ * Die Figur-Klasse inst eine Perent-Class für Raumschiff-Klasse, Gegner-Klasse und Projektil-Klasse.
+ * @author Wendelin
+ *
+ */
 public abstract class Figur {
 
 	private int speed;
@@ -23,21 +28,20 @@ public abstract class Figur {
 	Direction direction = Direction.N;
 
 	/**
-	 * dient der Darstellung der Richtung
-	 * @author Wendelin
-	 *
+	 * Dieser Enum dient der Darstellung der Richtung einer Figur.
 	 */
 	public enum Direction {
 		N,E,S,W;
 	}
 
 	/**
-	 * @param hp
-	 * @param speed
-	 * @param size
-	 * @param x
-	 * @param y
-	 * @param direction
+	 * Dieser Konstrukor erstellt ein Figur-Object mit den Attributen und den Werten der Parameter.
+	 * @param speed : int Geschwindikeit der Figur
+	 * @param width : int breite
+	 * @param height : int höhe
+	 * @param x : int xPosition
+	 * @param y : int yPosition
+	 * @param direction : Direction Richtung in die die Figur schaut.
 	 */
 	public Figur(int speed, int width, int height, int x, int y, Direction direction) {
 		this.speed = speed;
@@ -48,6 +52,9 @@ public abstract class Figur {
 		this.direction = direction;
 	}
 	
+	/**
+	 * Diese Methode füght der projektilListe der Figur ein Projektil-Object hinzu.
+	 */
 	public void shoot() {
 		switch(direction) {
 		case N: projektilListe.add(new Projektil(speed * 3, 5, 15, x + width/2, y + height/3, direction)); break;
@@ -56,11 +63,23 @@ public abstract class Figur {
 		case W: projektilListe.add(new Projektil(speed * 3, 15, 5, x + width/2, y + height/3, direction)); break;
 		}
 	}
-
+	
+	/**
+	 * Das ist eine Abstracte Methode die die Figur zeichnen soll.
+	 * @param window : PApplet
+	 */
 	public abstract void draw(PApplet window);
-
+	
+	/**
+	 * Diese Methode soll die Figur bewegen.
+	 * @param window : PApplet
+	 */
 	public abstract void move(PApplet window);
 	
+	/**
+	 * Diese Methode giebt ein Ractangle-Object zurück das die Collisionbox der Figur darstellt.
+	 * @return new Rectangle(x, y, width, height)
+	 */
 	public Rectangle getBounds() {
 	    return new Rectangle(x, y, width, height);
 	}

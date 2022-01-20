@@ -5,7 +5,8 @@ import processing.core.PFont;
 import processing.core.PImage;
 
 /**
- * Diese Classe stelt den start des Spiels dar.
+ * Diese Klasse stelt den start des Spiels dar.
+ * Diese Klasse erbt von der View-Klasse
  * @author Wendelin
  *
  */
@@ -17,12 +18,21 @@ public class StartViewController extends View{
 	public StartViewController() {
 		super();
 	}
-
+	
+	/**
+	 * Das ist eine Methode die nur einmahl ausgeführt wird um alles zurück zu setzen 
+	 * oder neu zu erstellen befor der Startbildschirm angezeigt wird.
+	 * @param window : PApplet
+	 */
 	@Override
 	public void restart(PApplet window) {
 		setBg(window.loadImage("/img/bg_start.jpg"));
 	}
-
+	
+	/**
+	 * Das ist eine Methode die den Startbildschirm zeichnen soll.
+	 * @param window : PApplet
+	 */
 	@Override
 	public void draw(PApplet window) {
 		window.background(getBg());

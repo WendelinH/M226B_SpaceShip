@@ -1,4 +1,4 @@
-# Arbeitsjournal vom 18.01.2022 Teil 1
+# Arbeitsjournal vom 18.01.2022
 
 |Titel |Angaben  |
 | --- | --- |

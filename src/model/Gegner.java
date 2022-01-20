@@ -8,6 +8,12 @@ import processing.core.PApplet;
 import processing.core.PFont;
 import processing.core.PImage;
 
+/**
+ * Die Gegner-Klasse erbt von der Figur-Klasse und implementiert das Observer-Interface.<br>
+ * Diese Klasse ist ein Raumschif das sich auf einer Linie bewegt und ein Hinderniss für das Raumschif ist.
+ * @author Wendelin
+ *
+ */
 public class Gegner extends Figur implements Observer{
 
 	private String name;
@@ -17,7 +23,17 @@ public class Gegner extends Figur implements Observer{
 	private int startYPos;
 	private int endXPos;
 	private int endYPos;
-
+	
+	/**
+	 * Der Konstruktor der Gegner-Klasse
+	 * @param name : String der Name des Gegners
+	 * @param speed : int die Geschwindikeit des Gegners
+	 * @param x : xPosition
+	 * @param y : yPosition
+	 * @param direction : Direction die richtung in die der Gegner schaut
+	 * @param moveDistanc : int die Distanc die der Gegner sich bewegen kann
+	 * @param window : PApplet
+	 */
 	public Gegner(String name, int speed, int x, int y, Direction direction, int moveDistanc, PApplet window) {
 		super(speed, 50, 50, x, y, direction);
 		this.name = name;
@@ -49,7 +65,11 @@ public class Gegner extends Figur implements Observer{
 		setImg_S(window.loadImage("/img/gegner_S.png"));
 		setImg_W(window.loadImage("/img/gegner_W.png"));
 	}
-
+	
+	/**
+	 * Das ist eine Abstracte Methode die die Gegner zeichnet.
+	 * @param window : PApplet
+	 */
 	@Override
 	public void draw(PApplet window) {
 		if(broken) {
@@ -69,8 +89,8 @@ public class Gegner extends Figur implements Observer{
 		}
 
 		for (Projektil p : getProjektilListe()) {
-			p.draw(window);
 			p.move(window);
+			p.draw(window);
 		}
 
 		window.image(img, getX(), getY());
@@ -85,7 +105,11 @@ public class Gegner extends Figur implements Observer{
 		}
 		window.text(name, getX(), getY());
 	}
-
+	
+	/**
+	 * Diese Methode bewegen den Gegner.
+	 * @param window : PApplet
+	 */
 	@Override
 	public void move(PApplet window) {
 		if (!broken) {
@@ -122,9 +146,9 @@ public class Gegner extends Figur implements Observer{
 	}
 
 	/**
-	 * Das sind die Funktionen die ein Observer braucht.
+	 * Diese Methode übernimt die Nachrichten der Subjekt-Interface und verarbeitet sie dementsprechend.
+	 * @param nachricht : String Die Nachricht die übermitelt wird
 	 */
-
 	@Override
 	public void update(String nachricht) {
 		if(nachricht == "Jemand ist KO gegangen.") {

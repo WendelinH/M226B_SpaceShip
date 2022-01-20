@@ -34,7 +34,7 @@ Alles beschreiben (Klassen-Diagramm, Bilder, Code-Snipped, Geplant / doch anders
 + Test 3 von 3 schon erstellt.
 ```
 
-8. JavaDoc erstellen ~~Eint teil~~
+8. ~~JavaDoc erstellen~~
 9.  Zeitplan Verfollständigen und Vor-her und Nach-her 
 10. Dokumentation des Projekts ungefähr 10 Seiten auch TagesJournal verwenden.
 ```diff
@@ -48,6 +48,9 @@ Alles beschreiben (Klassen-Diagramm, Bilder, Code-Snipped, Geplant / doch anders
 16. - Tagesjournal verwenden um einen roten faden des Projektes erleutern zu können.
 17. Anforderungen an das Projekt und seine bewertung auf Teams anschauen und überprüfen ob alles erfült wirt?
 18. ...
+```diff
+- WICHTIG: Rechtschreibung in dert Dokumentation und JavaDoc und InGame überprüfen lassen.
+```
 
 
 

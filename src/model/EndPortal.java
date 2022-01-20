@@ -5,6 +5,11 @@ import java.awt.Rectangle;
 import processing.core.PApplet;
 import processing.core.PImage;
 
+/**
+ * Die EndPortal-Klasse ist das Ziel für das Raumschiff.
+ * @author Wendelin
+ *
+ */
 public class EndPortal {
 	
 	private int x;
@@ -13,8 +18,9 @@ public class EndPortal {
 	private int height;
 
 	/**
-	 * @param x
-	 * @param y
+	 * Dieser Konstrukor erstellt ein EndPortal-Object mit den Attributen und den Werten der Parameter.
+	 * @param x : int xPosition
+	 * @param y : int yPosition
 	 */
 	public EndPortal(int x, int y) {
 		this.x = x;
@@ -23,6 +29,10 @@ public class EndPortal {
 		height = 50;
 	}
 	
+	/**
+	 * Diese draw-Methode zeichnet die EndPortal.
+	 * @param window : PApplet
+	 */
 	public void draw(PApplet window) {
 		window.strokeWeight(1);
 		window.noFill();
@@ -32,6 +42,10 @@ public class EndPortal {
 		window.image(img, x, y);
 	}
 	
+	/**
+	 * Diese Methode giebt ein Ractangle-Object zurück das die Collisionbox der EndPortal darstellt.
+	 * @return new Rectangle(x, y, width, height)
+	 */
 	public Rectangle getBounds() {
 	    return new Rectangle(x, y, width, height);
 	}
