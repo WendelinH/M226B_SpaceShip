@@ -44,7 +44,7 @@ Alles beschreiben (Klassen-Diagramm, Bilder, Code-Snipped, Geplant / doch anders
 12. - Klassendiagramm beschreiben (Vererbung und Interface) warum? wo?
 13. - Zeitplan
 14. - Bilder und Code-snipped(Aktualisieren und vileicht auch neue wie Colision oder der gleichen.)
-15. - Text und beschreibungen
+15. - Tests und beschreibungen
 16. - Tagesjournal verwenden um einen roten faden des Projektes erleutern zu können.
 17. Anforderungen an das Projekt und seine bewertung auf Teams anschauen und überprüfen ob alles erfült wirt?
 18. ...

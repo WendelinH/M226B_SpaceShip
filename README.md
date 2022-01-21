@@ -3,10 +3,15 @@
 ## M226B Projekt Dokumentation
 ### Inhalt
 Informieren ...3
+
 Planen.........3
+
 Entscheiden ...3
+
 Realisieren ...3
+
 Kontrollieren .3
+
 Auswerten .....3
 
 ### Informieren
@@ -20,6 +25,8 @@ Stand 13-12-2021
 [Zeitplan 13-12-2021](Zeitplan/Zeitplan_2021-12-13.pdf)
 
 #### Klassen-Diagramm
+
+### Entscheiden
 Stand 06-12-2021
 ![Erstes Classen-Diagramm](Classen-Diagramme/Screenshot_2021-12-06_102343.png)
 
@@ -28,8 +35,6 @@ Stand 09-12-2021
 
 Stand 04-01-2022
 ![Drites Classen-Diagramm](Classen-Diagramme/Screenshot_2022-01-04_231106.png)
-
-### Entscheiden
 
 ### Realisieren
 
