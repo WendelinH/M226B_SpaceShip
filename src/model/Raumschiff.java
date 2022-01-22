@@ -9,7 +9,7 @@ import processing.core.PImage;
  *
  */
 public class Raumschiff extends Figur{
-	
+
 	/**
 	 * Konstruktor der Raumschiff-Klasse
 	 * @param speed : int Geschwindikeit des Raumschiff
@@ -25,7 +25,7 @@ public class Raumschiff extends Figur{
 		setImg_S(window.loadImage("/img/spaceship_S.png"));
 		setImg_W(window.loadImage("/img/spaceship_W.png"));
 	}
-	
+
 	/**
 	 * Diese Methode zeichnet das Raumschiff.
 	 * @param window : PApplet
@@ -43,15 +43,15 @@ public class Raumschiff extends Figur{
 		case S: img = getImg_S(); break; 
 		case W: img = getImg_W(); break; 			
 		}
-		
+
 		for (Projektil p : getProjektilListe()) {
 			p.move(window);
 			p.draw(window);
 		}
-		
+
 		window.image(img, getX(), getY());
 	}
-	
+
 	/**
 	 * Die Methode bewegt das Raumschiff.
 	 * @param window : PApplet

@@ -22,7 +22,7 @@ public abstract class Figur {
 	private PImage img_E;
 	private PImage img_S;
 	private PImage img_W;
-	
+
 	private ArrayList<Projektil> projektilListe = new ArrayList<>();
 
 	Direction direction = Direction.N;
@@ -51,7 +51,7 @@ public abstract class Figur {
 		this.y = y;
 		this.direction = direction;
 	}
-	
+
 	/**
 	 * Diese Methode füght der projektilListe der Figur ein Projektil-Object hinzu.
 	 */
@@ -63,25 +63,25 @@ public abstract class Figur {
 		case W: projektilListe.add(new Projektil(speed * 3, 15, 5, x + width/2, y + height/3, direction)); break;
 		}
 	}
-	
+
 	/**
 	 * Das ist eine Abstracte Methode die die Figur zeichnen soll.
 	 * @param window : PApplet
 	 */
 	public abstract void draw(PApplet window);
-	
+
 	/**
 	 * Diese Methode soll die Figur bewegen.
 	 * @param window : PApplet
 	 */
 	public abstract void move(PApplet window);
-	
+
 	/**
 	 * Diese Methode giebt ein Ractangle-Object zurück das die Collisionbox der Figur darstellt.
 	 * @return new Rectangle(x, y, width, height)
 	 */
 	public Rectangle getBounds() {
-	    return new Rectangle(x, y, width, height);
+		return new Rectangle(x, y, width, height);
 	}
 
 	/**

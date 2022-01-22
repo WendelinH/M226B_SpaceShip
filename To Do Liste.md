@@ -46,8 +46,9 @@ Alles beschreiben (Klassen-Diagramm, Bilder, Code-Snipped, Geplant / doch anders
 14. - Bilder und Code-snipped(Aktualisieren und vileicht auch neue wie Colision oder der gleichen.)
 15. - Tests und beschreibungen
 16. - Tagesjournal verwenden um einen roten faden des Projektes erleutern zu können.
-17. Anforderungen an das Projekt und seine bewertung auf Teams anschauen und überprüfen ob alles erfült wirt?
-18. ...
+17. - Fazit und Auswertung noch was schreiben.
+18. Anforderungen an das Projekt und seine bewertung auf Teams anschauen und überprüfen ob alles erfült wirt?
+19. ...
 ```diff
 - WICHTIG: Rechtschreibung in dert Dokumentation und JavaDoc und InGame überprüfen lassen.
 ```
