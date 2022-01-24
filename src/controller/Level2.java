@@ -60,7 +60,6 @@ public class Level2 extends LevelViewController{
 		int size = 75;
 		for(int i = 0; i<=25; i++){
 			AsteroidenWand a1 = new AsteroidenWand(x, y, size, size, window);
-			System.out.println(i+". ("+x+"/"+y+")");
 			getAsteroidenListe().add(a1);
 			x = x + size + size;
 			if(i%5 == 0 && i != 0){
