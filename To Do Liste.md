@@ -49,9 +49,6 @@ Alles beschreiben (Klassen-Diagramm, Bilder, Code-Snipped, Geplant / doch anders
 17. - Fazit und Auswertung noch was schreiben.
 18. Anforderungen an das Projekt und seine bewertung auf Teams anschauen und überprüfen ob alles erfült wirt?
 19. ...
-```diff
-- WICHTIG: Rechtschreibung in dert Dokumentation und JavaDoc und InGame überprüfen lassen.
-```
 
 
 
