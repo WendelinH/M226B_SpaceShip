@@ -37,7 +37,7 @@ public class Level1 extends LevelViewController{
 		getAsteroidenListe().clear();
 
 		setRaumschiff(new Raumschiff(3, 20, 680, Direction.N, window));
-		setEndPortal(new EndPortal(700, 0));
+		setEndPortal(new EndPortal(700, 0, window));
 
 		setLevelCompleat(false);
 		setGameOver(false);

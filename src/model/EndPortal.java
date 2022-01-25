@@ -16,17 +16,21 @@ public class EndPortal {
 	private int y;
 	private int width;
 	private int height;
+	
+	PImage img = null;
 
 	/**
 	 * Dieser Konstrukor erstellt ein EndPortal-Object mit den Attributen und den Werten der Parameter.
 	 * @param x : int xPosition
 	 * @param y : int yPosition
 	 */
-	public EndPortal(int x, int y) {
+	public EndPortal(int x, int y, PApplet window) {
 		this.x = x;
 		this.y = y;
 		width = 50;
 		height = 50;
+		
+		img = window.loadImage("/img/endPortal.png");
 	}
 	
 	/**
@@ -37,8 +41,6 @@ public class EndPortal {
 		window.strokeWeight(1);
 		window.noFill();
 		window.rect(x, y, width, height);
-		PImage img = null;
-		img = window.loadImage("/img/endPortal.png");
 		window.image(img, x, y);
 	}
 	
